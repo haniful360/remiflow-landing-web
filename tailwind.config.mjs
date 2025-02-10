@@ -11,6 +11,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        noto: ["var(--font-noto)", "sans-serif"],
+        poppins: ["var(--font-poppins)", "sans-serif"],
+      },
     },
   },
   plugins: [],
