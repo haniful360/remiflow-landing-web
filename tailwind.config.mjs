@@ -14,6 +14,7 @@ export default {
       fontFamily: {
         noto: ["var(--font-noto)", "sans-serif"],
         poppins: ["var(--font-poppins)", "sans-serif"],
+        outfit: ['var(--font-outfit)', "sans-serif"],
       },
     },
   },

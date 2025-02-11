@@ -1,17 +1,25 @@
-import { Noto_Sans, Poppins } from "next/font/google";
+import { Noto_Sans, Outfit, Poppins } from "next/font/google";
 import "./globals.css";
 
 const notoSans = Noto_Sans({
-  subsets: ["latin"], // Specify the subset
-  weight: ["400", "700"], // Choose font weights
-  variable: "--font-noto", // Optional: Define a CSS variable
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-noto",
 });
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "600", "700"], // Add desired weights
+  weight: ["400", "600", "700"],
   variable: "--font-poppins",
 });
+
+const outfit = Outfit({
+  subsets: ['latin'], 
+  weight: ['400', '500', '700'],
+  variable: '--font-outfit',
+});
+
+
 
 export const metadata = {
   title: "Create Next App",
@@ -22,7 +30,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${notoSans.variable} ${poppins.variable} antialiased`}
+        className={`${notoSans.variable} ${outfit.variable} ${poppins.variable} antialiased`}
       >
         {children}
       </body>

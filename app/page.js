@@ -13,12 +13,10 @@ export default function Home() {
       <div className="flex flex-col items-center w-full">
         {/* Header */}
       <Header/>
-
         {/* Main Content */}
        <HeroSection/>
       </div>
       <ExcitingNews/>
-
       <Features/>
       <FAQ/>
       <PromoSection/>
