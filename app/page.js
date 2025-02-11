@@ -6,6 +6,7 @@ import Footer from "./component/Footer";
 import Header from "./component/Header";
 import HeroSection from "./component/HeroSection";
 import Features from "@/app/component/Features";
+import FAQ from "./component/FAQ";
 export default function Home() {
   return (
     <div>
@@ -19,6 +20,7 @@ export default function Home() {
       <ExcitingNews/>
 
       <Features/>
+      <FAQ/>
       <PromoSection/>
       <Footer/>
     </div>

@@ -4,7 +4,7 @@ import logo from "@/public/images/logo.svg";
 import Link from "next/link";
 const Header = () => {
     return (
-        <header className="w-full h-[120px] flex justify-center shadow bg-white">
+        <header className="w-full h-[120px] flex justify-center shadow-md bg-white">
         <div className="max-w-[1250px] w-full flex justify-between items-center p-4">
           <Link
             href="/"
