@@ -17,7 +17,7 @@ const Header = () => {
             <Link href="#" className="text-gray-700">
               Home
             </Link>
-            <Link href="#" className="text-gray-700">
+            <Link href="#faq" className="text-gray-700">
               FAQ
             </Link>
             <Link href="#" target="_blank" className="text-gray-700">
