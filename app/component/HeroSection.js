@@ -6,7 +6,7 @@ import Link from "next/link";
 const HeroSection = () => {
   return (
     <section className="bg-gradient">
-    <div className="mt-[80px] max-w-[1250px] mx-auto w-full p-4 lg:flex items-center justify-between gap-4">
+    <div className="mt-[180px] max-w-[1250px] mx-auto w-full p-4 lg:flex items-center justify-between gap-4">
       <div className="">
         <p className="font-poppins text-[#395664] lg:text-[20px]">
           we don’t just transfer money – we maximize your savings.
