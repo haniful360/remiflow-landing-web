@@ -24,15 +24,16 @@ const ExchangeBox = () => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+    <div className="bg-white p-6 rounded-lg shadow-lg border border-[#2B95FA]">
       <div className="bg-[#EDF7FE] p-3 rounded-lg">
-        <span className="text-gray-600">You send</span>
+        <span className="text-gray-600 font-poppins">You send</span>
         <div className="flex items-center bg-white p-2 rounded-lg border border-gray-300 mt-2">
           <input
             type="number"
             className="p-2 text-lg font-semibold focus:outline-none"
             value={amount}
             onChange={handleAmountChange}
+            required
           />
           <div className="flex items-center gap-2 border-l pl-2">
             <Image src={CA} alt="Canada Flag" width={45} height={45} />
@@ -71,7 +72,7 @@ const ExchangeBox = () => {
       </div>
 
       <div className="bg-[#EDF7FE] p-3 rounded-lg">
-        <span className="text-gray-600">They get</span>
+        <span className="text-gray-600 font-poppins">They get</span>
         <div className="flex items-center bg-white p-2 rounded-lg border border-gray-300 mt-2">
           <input
             type="text"
