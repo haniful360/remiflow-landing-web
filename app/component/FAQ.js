@@ -11,22 +11,21 @@ export default function FAQSection() {
     {
       question: "How does RemiFlow offer better rates than banks and Remitly?",
       answer:
-        "We operate with lower overheads and pass the savings on to you. Unlike traditional financial institutions, we don’t inflate exchange rates to profit off you.",
-    },
+        " A: We operate with lower overheads and pass the savings on to you. Unlike traditional financial institutions, we do not inflate exchange rates to profit off you. "},
     {
       question: "How long does it take for the money to reach my recipient?",
       answer:
-        "We operate with lower overheads and pass the savings on to you. Unlike traditional financial institutions, we don’t inflate exchange rates to profit off you.",
+        "A: We ensure transfers are completed within 1-3 business days – no unnecessary delays.",
     },
     {
       question: "Is my money safe with RemiFlow?",
       answer:
-        "We operate with lower overheads and pass the savings on to you. Unlike traditional financial institutions, we don’t inflate exchange rates to profit off you.",
+        "A: Absolutely! We implement the highest security protocols to keep your transactions protected.",
     },
     {
       question: "Can I pay with cash?",
       answer:
-        "We operate with lower overheads and pass the savings on to you. Unlike traditional financial institutions, we don’t inflate exchange rates to profit off you.",
+        "A: Yes! If you’re in the GTA, we pick up cash directly from your location for ultimate convenience.",
     },
   ];
 
