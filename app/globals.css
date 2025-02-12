@@ -21,3 +21,69 @@ html {
 .bg-gradient{
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(43, 149, 250, 0.08) 47%, rgba(255, 255, 255, 0.05) 100%);
 }
+
+.exchange-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.exchange-section {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.exchange-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.exchange-input input {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.exchange-details, .payment-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.fee-details, .amount-to-convert, .payment-method, .delivery-time {
+  display: flex;
+  flex-direction: column;
+}
+
+.exchange-rate-section {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.send-money-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.send-money-button:hover {
+  background-color: #45a049;
+}
+
+.send_money_btn{
+  background: linear-gradient(180deg, #67B5FF 0%, #268BEB 100%);
+
+}
