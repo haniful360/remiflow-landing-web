@@ -58,7 +58,10 @@ const MoneyTransfer = () => {
     },
   ];
   return (
-    <div className="px-4 lg:px-0 max-w-[1250px] mx-auto mt-[100px]">
+    <div
+      className="px-4 lg:px-0 max-w-[1250px] mx-auto mt-12 lg:mt-[100px]"
+      data-aos="fade-up"
+    >
       <div className="text-center mb-[100px]">
         <h2 className="text-[#67B5FF] lg:text-[32px]  font-medium font-poppins text-lg">
           Just 4 easy steps
@@ -73,6 +76,7 @@ const MoneyTransfer = () => {
           <div className="space-y-14">
             {steps.map((step, index) => (
               <div
+                data-aos="fade-up"
                 key={index}
                 className="p-6 relative bg-[#2B95FA1A] rounded-xl flex flex-col items-center text-center"
               >

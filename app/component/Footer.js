@@ -10,8 +10,8 @@ import instagram from "@/public/images/Logo Instagram.svg";
 const Footer = () => {
     return (
         <footer className="bg-[#F9FAFB] text-gray-800 text-sm">
-      <div className="max-w-[1250px] mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div>
+      <div className="max-w-[1250px] mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div data-aos="fade-up">
           <h2 className="text-xl font-bold flex items-center space-x-2">
           <Link href="/">
         <Image src={logo} alt="" width={198} height={53} />
@@ -25,7 +25,7 @@ const Footer = () => {
             <Link href="#" className="text-gray-600 hover:text-gray-900"><Image src={linkedIn} alt="" width={24} height={24} /></Link>
           </div>
         </div>
-        <div className='font-poppins'>
+        <div className='font-poppins' data-aos="fade-up">
           <h3 className="text-lg font-semibold mb-2">Use cases</h3>
           <ul className="space-y-2 text-[#1E1E1E]">
             <li>UI design</li>
@@ -37,7 +37,7 @@ const Footer = () => {
             <li>Team collaboration</li>
           </ul>
         </div>
-        <div className='font-poppins'>
+        <div className='font-poppins' data-aos="fade-up">
           <h3 className="text-lg font-semibold mb-2">Explore</h3>
           <ul className="space-y-2 text-[#1E1E1E]">
             <li>Design</li>
@@ -49,7 +49,7 @@ const Footer = () => {
             <li>FigJam</li>
           </ul>
         </div>
-        <div className='font-poppins'>
+        <div className='font-poppins' data-aos="fade-up">
           <h3 className="text-lg font-semibold mb-2">Resources</h3>
           <ul className="space-y-2 text-[#1E1E1E]">
             <li>Blog</li>

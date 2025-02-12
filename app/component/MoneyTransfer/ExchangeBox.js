@@ -24,7 +24,7 @@ const ExchangeBox = () => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-lg border border-[#2B95FA]">
+    <div className="bg-white p-6 rounded-lg shadow-lg border border-[#2B95FA]" data-aos="fade-up-left">
       <div className="bg-[#EDF7FE] p-3 rounded-lg">
         <span className="text-gray-600 font-poppins">You send</span>
         <div className="flex items-center bg-white p-2 rounded-lg border border-gray-300 mt-2">
@@ -37,8 +37,8 @@ const ExchangeBox = () => {
           />
           <div className="flex items-center gap-2 border-l pl-2">
             <Image src={CA} alt="Canada Flag" width={45} height={45} />
-            <span className="text-gray-800 font-semibold">CAD</span>
-            <Image src={downarrow} alt="Down Arrow" width={16} height={14} />
+            <span className="text-gray-800 font-semibold hidden sm:block">CAD</span>
+            <Image src={downarrow} alt="Down Arrow" width={16} height={14} className="hidden" />
           </div>
         </div>
       </div>
@@ -82,8 +82,8 @@ const ExchangeBox = () => {
           />
           <div className="flex items-center gap-2 border-l pl-2">
             <Image src={IN} alt="India Flag" width={45} height={45} />
-            <span className="text-gray-800 font-semibold">INR</span>
-            <Image src={downarrow} alt="Down Arrow" width={16} height={14} />
+            <span className="text-gray-800 font-semibold hidden sm:block">INR</span>
+            <Image src={downarrow} alt="Down Arrow" width={16} height={14} className="hidden" />
           </div>
         </div>
       </div>
@@ -119,7 +119,7 @@ const ExchangeBox = () => {
         onClick={lockInRate}
         className="send_money_btn w-full mt-4 h-[74px] text-[24px] font-poppins text-white py-3 rounded-lg hover:bg-blue-700 transition"
       >
-        Send money
+        Lock in Rate & Continue
       </button>
     </div>
   );

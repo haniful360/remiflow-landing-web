@@ -14,40 +14,40 @@ const features = [
     title: "Better Rates, More Savings",
     description:
       "Get the highest exchange rates so your loved ones receive more.",
-    icon: feature1, // Replace with appropriate icon
+    icon: feature1,
   },
   {
     title: "Cash Pickup Service",
     description:
       "Cash Pickup Service – Located in GTA? We’ll pick up your cash for added convenience.",
-    icon: feature2, // Replace with appropriate icon
+    icon: feature2,
   },
   {
     title: "Seamless Transfers",
     description:
       "Pay using e-transfer or cash. We don’t store your credit or debit card information.",
-    icon: feature3, // Replace with appropriate icon
+    icon: feature3,
   },
   {
     title: "Zero Fees, Zero Hassles",
     description: "No hidden charges, no surprises – just pure value.",
-    icon: feature4, // Replace with appropriate icon
+    icon: feature4,
   },
   {
     title: "Fast Processing",
     description: "Funds delivered within 1-3 days no waiting, no delays.",
-    icon: feature5, // Replace with appropriate icon
+    icon: feature5,
   },
   {
     title: "Trusted & Secure",
     description: "Your money is handled with the highest safety standards.",
-    icon: feature6, // Replace with appropriate icon
+    icon: feature6,
   },
 ];
 
 const Features = () => {
   return (
-    <div className="lg:h-[860px] font-poppins flex items-center justify-center bg-[url(/images/about_us.png)] bg-center bg-no-repeat bg-cover">
+    <div className="lg:h-[800px] font-poppins flex items-center justify-center bg-[url(/images/about_us.png)] bg-center bg-no-repeat bg-cover">
       <div className="py-12">
         <div className="max-w-[1250px] mx-auto flex flex-col lg:flex-row items-center gap-12">
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 flex-1">
@@ -55,8 +55,8 @@ const Features = () => {
               <div
                 key={index}
                 className="relative bg-white p-4 rounded-lg shadow-md text-center flex flex-col items-center"
+                data-aos="fade-up"
               >
-                {/* <div className="text-4xl mb-4">{feature.icon}</div> */}
                 <Image
                   className="absolute -top-8 "
                   src={feature?.icon}
@@ -72,7 +72,7 @@ const Features = () => {
             ))}
           </div>
           <div className="lg:w-[480px] text-center lg:text-left">
-            <h2 className="text-2xl font-noto lg:text-[38px] font-semibold leading-[55px] text-[#FA6D2BF7]">
+            <h2 className="text-2xl font-noto lg:text-[38px] font-semibold leading-[55px] text-[#FA6D2BF7]" data-aos="fade-up">
               Why Choose Remiflow?
             </h2>
             <div className="text-[#607D8B] text-center font-poppins leading-[31px] mt-4 text-lg">
@@ -83,10 +83,11 @@ const Features = () => {
                     alt="Opening quote"
                     width={45}
                     height={45}
+                    data-aos="fade-up"
                   />
 
                 </div>
-                <p className="max-w-[368px]">
+                <p className="max-w-[368px]" data-aos="fade-up">
                   Built by immigrants, for <br /> immigrants – sending money{" "}
                   <br /> home isn’t just a transaction; <br /> it’s a
                   connection. We know <br /> every rupee counts. That’s <br />{" "}
@@ -96,12 +97,13 @@ const Features = () => {
                   most.
                 </p>
               </div>
-              <div className="flex justify-end relative right-24 -mt-2">
+              <div className="flex justify-end relative lg:right-24 -mt-2">
                 <Image
                   src={quote1}
                   alt="Closing quote"
                   width={45}
                   height={45}
+                  data-aos="fade-up"
                 />{" "}
                 {/* Adjust width and height as needed */}
               </div>

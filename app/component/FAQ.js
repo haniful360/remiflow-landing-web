@@ -36,29 +36,29 @@ export default function FAQSection() {
   return (
     <div
       id="faq"
-      className="max-w-[1250px] h-[611px] mx-auto px-4 py-10 flex flex-col items-center md:flex-row gap-10"
+      className="max-w-[1250px] lg:h-[611px] mx-auto px-4 py-10 flex flex-col items-center md:flex-row gap-10"
     >
       {/* Left Section (Title & Description) */}
-      <div className="md:w-1/2 space-y-6">
+      <div className="md:w-1/2 space-y-6 text-center md:text-left">
         {/* Subheading */}
-        <h2 className="text-[#039D21] font-semibold uppercase text-sm text-[16px] tracking-widest mb-2">
+        <h2 className="text-[#039D21] font-semibold uppercase text-sm text-[16px] tracking-widest mb-2" data-aos="fade-up">
           Frequently Asked Questions
         </h2>
 
         {/* Main Heading */}
-        <h1 className="text-3xl sm:text-4xl lg:text-[50px] font-semibold leading-relaxed font-poppins text-[#2B95FA] mb-4">
+        <h1 className="text-3xl sm:text-4xl lg:text-[50px] font-semibold leading-relaxed font-poppins text-[#2B95FA] mb-4" data-aos="fade-up">
           Got Questions? We’ve Got Answers!
         </h1>
 
         {/* Description */}
-        <p className="text-[#717880] max-w-md text-sm text-[16px] leading-relaxed">
+        <p className="text-[#717880] max-w-md font-outfit text-[16px] leading-relaxed" data-aos="fade-up">
           Curious about something? We're here to help! Find clear, reliable
           answers to all your questions. No confusion, just simple explanations.
           Ask away—we’ve got the information you need!
         </p>
 
         {/* Call-to-Action Button (Optional) */}
-        <button className="mt-6 px-8 py-3 bg-[#2B95FA] text-white font-semibold rounded-lg hover:bg-[#1a7cc7] transition duration-300">
+        <button className="mt-6 px-8 py-3 bg-[#2B95FA] text-white font-semibold rounded-lg hover:bg-[#1a7cc7] transition duration-300" data-aos="fade-up">
           Explore FAQs
         </button>
       </div>
@@ -67,8 +67,9 @@ export default function FAQSection() {
       <div className="md:w-1/2 space-y-4">
         {faqs.map((faq, index) => (
           <div
+          data-aos="fade-up"
             key={index}
-            className="pb-4 cursor-pointer"
+            className="lg:pb-4 cursor-pointer"
             onClick={() => toggleFAQ(index)}
           >
             {/* FAQ Question */}
