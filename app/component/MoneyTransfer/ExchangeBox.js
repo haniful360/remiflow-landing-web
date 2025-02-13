@@ -36,7 +36,7 @@ const ExchangeBox = () => {
         <div className="flex items-center bg-white p-2 rounded-lg border border-gray-300 mt-2">
           <input
             type="number"
-            className="p-1 text-base sm:text-lg font-semibold focus:outline-none"
+            className="p-1 text-base sm:text-lg font-semibold focus:outline-none flex-1"
             value={amount}
             onChange={handleAmountChange}
             required
@@ -45,9 +45,9 @@ const ExchangeBox = () => {
             <Image
               src={CA}
               alt="Canada Flag"
-              width={30}
-              height={30}
-              className="w-6 h-6 sm:w-8 sm:h-8"
+              width={40} // Increased base size for mobile
+              height={40} // Increased base size for mobile
+              className="w-8 h-8 sm:w-10 sm:h-10" // Adjusted for better visibility on mobile
             />
             <span className="text-gray-800 font-semibold hidden sm:block">
               CAD
@@ -65,7 +65,11 @@ const ExchangeBox = () => {
 
       {/* Conversion Details Section */}
       <div className="flex flex-col sm:flex-row gap-2 py-4 text-gray-700">
-        <Image className="sm:ml-5 mx-auto hidden md:block" src={left} alt="Left Icon" />
+        <Image
+          className="sm:ml-5 mx-auto hidden md:block"
+          src={left}
+          alt="Left Icon"
+        />
         <div className="w-full space-y-2 font-poppins text-sm sm:text-[18px]">
           <p className="flex justify-between text-[#333333] font-medium">
             <span>Fees*</span>
