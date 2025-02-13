@@ -10,8 +10,8 @@ import MoneyTransfer from "./component/MoneyTransfer/MoneyTransfer";
 export default function Home() {
   return (
     <div>
-      <Header />
-      <HeroSection />
+      {/* <Header /> */}
+      {/* <HeroSection /> */}
       <MoneyTransfer/>
       <ExcitingNews />
       <Features />

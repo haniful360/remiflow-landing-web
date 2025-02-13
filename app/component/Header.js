@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import logo from "@/public/images/logo.svg";
 import Link from "next/link";
@@ -8,6 +8,19 @@ import MenuIcon from "./svg/MenuIcon";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflowX = "hidden";
+    } else {
+      document.body.style.overflowX = "auto";
+    }
+
+    return () => {
+      document.body.style.overflowX = "auto";
+    };
+  }, [isOpen]);
 
   return (
     <>
@@ -65,7 +78,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 w-[70%] sm:w-[50%] h-full bg-white shadow-lg transform ${
+        className={`fixed top-0 right-0 w-[50%] sm:w-[50%] h-full bg-white shadow-lg transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 md:hidden flex flex-col items-start p-6 z-50`}
       >

@@ -24,28 +24,49 @@ const ExchangeBox = () => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-lg border border-[#2B95FA]" data-aos="fade-up-left">
+    <div
+      className="bg-white p-4 sm:p-6 rounded-lg shadow-lg border border-[#2B95FA]"
+      data-aos="fade-up-left"
+    >
+      {/* You Send Section */}
       <div className="bg-[#EDF7FE] p-3 rounded-lg">
-        <span className="text-gray-600 font-poppins">You send</span>
+        <span className="text-gray-600 font-poppins text-sm sm:text-base">
+          You send
+        </span>
         <div className="flex items-center bg-white p-2 rounded-lg border border-gray-300 mt-2">
           <input
             type="number"
-            className="p-2 text-lg font-semibold focus:outline-none"
+            className="p-1 text-base sm:text-lg font-semibold focus:outline-none"
             value={amount}
             onChange={handleAmountChange}
             required
           />
           <div className="flex items-center gap-2 border-l pl-2">
-            <Image src={CA} alt="Canada Flag" width={45} height={45} />
-            <span className="text-gray-800 font-semibold hidden sm:block">CAD</span>
-            <Image src={downarrow} alt="Down Arrow" width={16} height={14} className="hidden" />
+            <Image
+              src={CA}
+              alt="Canada Flag"
+              width={30}
+              height={30}
+              className="w-6 h-6 sm:w-8 sm:h-8"
+            />
+            <span className="text-gray-800 font-semibold hidden sm:block">
+              CAD
+            </span>
+            <Image
+              src={downarrow}
+              alt="Down Arrow"
+              width={16}
+              height={14}
+              className="hidden"
+            />
           </div>
         </div>
       </div>
 
-      <div className="flex gap-2 py-4 text-gray-700">
-        <Image className="ml-5" src={left} alt="Left Icon" />
-        <div className="w-full space-y-2 font-poppins text-[18px]">
+      {/* Conversion Details Section */}
+      <div className="flex flex-col sm:flex-row gap-2 py-4 text-gray-700">
+        <Image className="sm:ml-5 mx-auto hidden md:block" src={left} alt="Left Icon" />
+        <div className="w-full space-y-2 font-poppins text-sm sm:text-[18px]">
           <p className="flex justify-between text-[#333333] font-medium">
             <span>Fees*</span>
             <span>0 CAD</span>
@@ -71,53 +92,74 @@ const ExchangeBox = () => {
         </div>
       </div>
 
+      {/* They Get Section */}
       <div className="bg-[#EDF7FE] p-3 rounded-lg">
-        <span className="text-gray-600 font-poppins">They get</span>
+        <span className="text-gray-600 font-poppins text-sm sm:text-base">
+          They get
+        </span>
         <div className="flex items-center bg-white p-2 rounded-lg border border-gray-300 mt-2">
           <input
             type="text"
-            className="p-2 text-lg font-semibold focus:outline-none"
+            className="p-1 text-base sm:text-lg font-semibold focus:outline-none"
             value={convertedAmount}
             readOnly
           />
           <div className="flex items-center gap-2 border-l pl-2">
-            <Image src={IN} alt="India Flag" width={45} height={45} />
-            <span className="text-gray-800 font-semibold hidden sm:block">INR</span>
-            <Image src={downarrow} alt="Down Arrow" width={16} height={14} className="hidden" />
+            <Image
+              src={IN}
+              alt="India Flag"
+              width={30}
+              height={30}
+              className="w-6 h-6 sm:w-8 sm:h-8"
+            />
+            <span className="text-gray-800 font-semibold hidden sm:block">
+              INR
+            </span>
+            <Image
+              src={downarrow}
+              alt="Down Arrow"
+              width={16}
+              height={14}
+              className="hidden"
+            />
           </div>
         </div>
       </div>
 
-      <p className="text-right text-[16px] text-sm text-[#989898] mt-2 font-poppins font-medium border-b-[1.25px] pt-1 pb-2 border-[#ECEEF3]">
+      {/* Exchange Rate */}
+      <p className="text-right text-sm sm:text-[16px] text-[#989898] mt-2 font-poppins font-medium border-b-[1.25px] pt-1 pb-2 border-[#ECEEF3]">
         1 CAD = {exchangeRate} INR
       </p>
 
       {/* Payment Options */}
-     <div className="flex items-center justify-between py-2">
-     <div className="rounded-lg font-poppins">
-        <label className="block text-[#727272] text-[16px] font-medium">Pay with:</label>
-        <select
-          className="w-full p-1 rounded text-green-600 font-semibold  focus:outline-none focus:ring-2 focus:ring-blue-500"
-          value={paymentMethod}
-          onChange={(e) => setPaymentMethod(e.target.value)}
-        >
-          <option>Interac E-Transfer</option>
-          <option>Cash Pickup in GTA</option>
-        </select>
-        <p className="text-center text-[#1A5996] font-medium">Free</p>
+      <div className="flex flex-col sm:flex-row items-center justify-between py-2">
+        <div className="rounded-lg font-poppins w-full sm:w-auto">
+          <label className="block text-[#727272] text-sm sm:text-[16px] font-medium">
+            Pay with:
+          </label>
+          <select
+            className="w-full p-1 rounded text-green-600 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500"
+            value={paymentMethod}
+            onChange={(e) => setPaymentMethod(e.target.value)}
+          >
+            <option>Interac E-Transfer</option>
+            <option>Cash Pickup in GTA</option>
+          </select>
+          <p className="text-center text-[#1A5996] font-medium">Free</p>
+        </div>
+
+        <div className="mt-3 sm:mt-5 text-center text-[#727272] text-sm sm:text-[16px] font-medium">
+          <span>
+            Estimated delivery time: <br />
+          </span>
+          <b className="ml-2">2-3 days</b>
+        </div>
       </div>
 
-      <div className="mt-5 text-center text-[#727272] text-[16px] font-medium">
-        <span>
-          Estimated delivery time: <br />
-        </span>
-        <b className="ml-2">2-3 days</b>
-      </div>
-     </div>
-
+      {/* Lock in Rate Button */}
       <button
         onClick={lockInRate}
-        className="send_money_btn w-full mt-4 h-[74px] text-[24px] font-poppins text-white py-3 rounded-lg hover:bg-blue-700 transition"
+        className="send_money_btn w-full mt-4 h-12 sm:h-[74px] text-lg sm:text-[24px] font-poppins text-white py-2 sm:py-3 rounded-lg hover:bg-blue-700 transition"
       >
         Lock in Rate & Continue
       </button>
