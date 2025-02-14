@@ -40,7 +40,7 @@ export default function FAQSection() {
       className="max-w-[1250px] lg:h-[611px] mx-auto px-4 py-10 flex flex-col items-center md:flex-row gap-10"
     >
       {/* Left Section (Title & Description) */}
-      <div className="md:w-1/2 space-y-6 text-center md:text-left">
+      <div className="md:w-1/2 space-y-6 ">
         {/* Subheading */}
         <h2
           className="text-[#039D21] font-semibold uppercase text-sm text-[16px] tracking-widest mb-2"
@@ -51,7 +51,7 @@ export default function FAQSection() {
 
         {/* Main Heading */}
         <h1
-          className="text-3xl sm:text-4xl lg:text-[50px] font-semibold leading-relaxed font-poppins text-[#2B95FA] mb-4"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-[50px] font-semibold leading-tight sm:leading-[40px] md:leading-[50px] lg:leading-[55px] font-outfit text-[#2B95FA] mb-4"
           data-aos="fade-up"
         >
           Got Questions? We’ve Got Answers!
@@ -59,7 +59,7 @@ export default function FAQSection() {
 
         {/* Description */}
         <p
-          className="text-[#717880] max-w-md font-outfit text-[16px] leading-relaxed"
+          className="text-[#717880] max-w-md font-outfit text-[16px] leading-[28px]"
           data-aos="fade-up"
         >
           Curious about something? We're here to help! Find clear, reliable
@@ -70,44 +70,45 @@ export default function FAQSection() {
 
       {/* Right Section (FAQ List) */}
       <div className="md:w-1/2 space-y-4">
-  {faqs.map((faq, index) => (
-    <div key={index}>
-      <button
-        className={`w-full flex  items-center justify-between hover:bg-blue-200 text-left text-blue-600 font-medium last:border-b-0 transition-all duration-300 ease-in-out ${
-          openIndex === index
-            ? "border-b border-gray-300"
-            : "border-b border-transparent py-2"
-        }`}
-        onClick={() => toggleFAQ(index)}
-      >
-       <div className="">
-       <div className="flex items-center gap-4 flex-1">
-          <div className="bg-blue-400 w-[45px] h-[45px] flex items-center justify-center transition-all duration-300 ease-in-out">
-            {openIndex === index ? (
-              <MinusIcon className="text-blue-600 transition-transform duration-300 ease-in-out rotate-180" />
-            ) : (
-              <PlusIcon className="text-blue-600 transition-transform duration-300 ease-in-out" />
-            )}
+        {faqs.map((faq, index) => (
+          <div key={index}>
+            <button
+              className={`w-full flex  items-center justify-between text-left text-[#2B95FA] font-medium last:border-b-0 transition-all duration-300 ease-in-out ${
+                openIndex === index
+                  ? "border-b border-[#CFD7E0]"
+                  : "border-b border-transparent py-2"
+              }`}
+              onClick={() => toggleFAQ(index)}
+            >
+              <div className="">
+                <div className="flex items-center gap-4 flex-1">
+                  <div className="bg-blue-400 lg:w-[45px] lg:h-[45px] flex items-center justify-center transition-all duration-300 ease-in-out p-1 lg:p-0">
+                    {openIndex === index ? (
+                      <MinusIcon className="text-[#2B95FA] transition-transform duration-300 ease-in-out rotate-180" />
+                    ) : (
+                      <PlusIcon className="text-[#2B95FA] transition-transform duration-300 ease-in-out" />
+                    )}
+                  </div>
+                  <span className="text-[#2B95FA] font-semibold text-[16px] leading-5 font-outfit">
+                    {faq.question}
+                  </span>
+                </div>
+              </div>
+            </button>
+            <div
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                openIndex === index
+                  ? "max-h-40 opacity-100"
+                  : "max-h-0 opacity-0"
+              }`}
+            >
+              <div className="mt-3 px-8 text-[#717880] text-[15px] font-outfit leading-7">
+                {faq.answer}
+              </div>
+            </div>
           </div>
-          <span className="text-[#2B95FA] font-semibold text-[16px] leading-5 font-outfit">
-            {faq.question}
-          </span>
-        </div>
-       </div>
-      </button>
-      <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          openIndex === index ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <div className="mt-3 px-8 text-[#717880] text-[15px] font-outfit leading-7">
-          {faq.answer}
-        </div>
+        ))}
       </div>
-    </div>
-  ))}
-</div>
-
     </div>
   );
 }
