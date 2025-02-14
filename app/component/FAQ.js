@@ -11,7 +11,8 @@ export default function FAQSection() {
     {
       question: "How does RemiFlow offer better rates than banks and Remitly?",
       answer:
-        " A: We operate with lower overheads and pass the savings on to you. Unlike traditional financial institutions, we do not inflate exchange rates to profit off you. "},
+        " A: We operate with lower overheads and pass the savings on to you. Unlike traditional financial institutions, we do not inflate exchange rates to profit off you. ",
+    },
     {
       question: "How long does it take for the money to reach my recipient?",
       answer:
@@ -41,62 +42,72 @@ export default function FAQSection() {
       {/* Left Section (Title & Description) */}
       <div className="md:w-1/2 space-y-6 text-center md:text-left">
         {/* Subheading */}
-        <h2 className="text-[#039D21] font-semibold uppercase text-sm text-[16px] tracking-widest mb-2" data-aos="fade-up">
+        <h2
+          className="text-[#039D21] font-semibold uppercase text-sm text-[16px] tracking-widest mb-2"
+          data-aos="fade-up"
+        >
           Frequently Asked Questions
         </h2>
 
         {/* Main Heading */}
-        <h1 className="text-3xl sm:text-4xl lg:text-[50px] font-semibold leading-relaxed font-poppins text-[#2B95FA] mb-4" data-aos="fade-up">
+        <h1
+          className="text-3xl sm:text-4xl lg:text-[50px] font-semibold leading-relaxed font-poppins text-[#2B95FA] mb-4"
+          data-aos="fade-up"
+        >
           Got Questions? We’ve Got Answers!
         </h1>
 
         {/* Description */}
-        <p className="text-[#717880] max-w-md font-outfit text-[16px] leading-relaxed" data-aos="fade-up">
+        <p
+          className="text-[#717880] max-w-md font-outfit text-[16px] leading-relaxed"
+          data-aos="fade-up"
+        >
           Curious about something? We're here to help! Find clear, reliable
           answers to all your questions. No confusion, just simple explanations.
           Ask away—we’ve got the information you need!
         </p>
-
-        {/* Call-to-Action Button (Optional) */}
-        <button className="mt-6 px-8 py-3 bg-[#2B95FA] text-white font-semibold rounded-lg hover:bg-[#1a7cc7] transition duration-300" data-aos="fade-up">
-          Explore FAQs
-        </button>
       </div>
 
       {/* Right Section (FAQ List) */}
       <div className="md:w-1/2 space-y-4">
-        {faqs.map((faq, index) => (
-          <div
-          data-aos="fade-up"
-            key={index}
-            className="lg:pb-4 cursor-pointer"
-            onClick={() => toggleFAQ(index)}
-          >
-            {/* FAQ Question */}
-            <div className="flex items-center bg-blue-100 px-4 py-3 rounded-md transition-all duration-300 hover:bg-blue-200">
-              <span className="text-xl text-blue-600 mr-4">
-                {openIndex === index ? <MinusIcon /> : <PlusIcon />}
-              </span>
-              <h3 className="text-[#2B95FA] font-semibold text-[16px] leading-5 font-outfit flex-1">
-                {faq.question}
-              </h3>
-            </div>
-
-            {/* FAQ Answer */}
-            <div
-              className={`transition-all duration-500 ease overflow-hidden ${
-                openIndex === index
-                  ? "max-h-96 opacity-100"
-                  : "max-h-0 opacity-0"
-              }`}
-            >
-              <p className="mt-3 px-8 text-[#717880] text-[15px] font-outfit leadin-7">
-                {faq.answer}
-              </p>
-            </div>
+  {faqs.map((faq, index) => (
+    <div key={index}>
+      <button
+        className={`w-full flex  items-center justify-between hover:bg-blue-200 text-left text-blue-600 font-medium last:border-b-0 transition-all duration-300 ease-in-out ${
+          openIndex === index
+            ? "border-b border-gray-300"
+            : "border-b border-transparent py-2"
+        }`}
+        onClick={() => toggleFAQ(index)}
+      >
+       <div className="">
+       <div className="flex items-center gap-4 flex-1">
+          <div className="bg-blue-400 w-[45px] h-[45px] flex items-center justify-center transition-all duration-300 ease-in-out">
+            {openIndex === index ? (
+              <MinusIcon className="text-blue-600 transition-transform duration-300 ease-in-out rotate-180" />
+            ) : (
+              <PlusIcon className="text-blue-600 transition-transform duration-300 ease-in-out" />
+            )}
           </div>
-        ))}
+          <span className="text-[#2B95FA] font-semibold text-[16px] leading-5 font-outfit">
+            {faq.question}
+          </span>
+        </div>
+       </div>
+      </button>
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          openIndex === index ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="mt-3 px-8 text-[#717880] text-[15px] font-outfit leading-7">
+          {faq.answer}
+        </div>
       </div>
+    </div>
+  ))}
+</div>
+
     </div>
   );
 }
