@@ -150,10 +150,7 @@ const ExchangeBox = () => {
         </div>
         {/* Responsive Border */}
         <div className="w-full h-px bg-gray-300 my-3 sm:hidden"></div>{" "}
-        {/* Horizontal border for mobile */}
-        <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-gray-300"></div>{" "}
-        {/* Vertical border for larger screens */}
-        {/* Second Div */}
+        <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2 h-4/6 w-px bg-gray-300"></div>{" "}
         <div className="mt-3 sm:mt-0 text-center text-[#727272] text-sm sm:text-[16px] font-medium">
           <span>
             Estimated delivery time: <br />

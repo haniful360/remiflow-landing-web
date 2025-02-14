@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const ExcitingNews = () => {
     return (
-      <div className="bg-[url(/images/exciting_bg.png)]">
+      <div className="bg-[url(/images/exciting_bg.svg)]">
       <div className="max-w-[1250px] mx-auto">
         <div className="mt-16 w-full lg:h-[800px] rounded-lg flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 text-center md:text-left">

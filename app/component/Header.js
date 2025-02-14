@@ -5,6 +5,7 @@ import logo from "@/public/images/logo.svg";
 import Link from "next/link";
 import CrossIcon from "./svg/CrossIcon";
 import MenuIcon from "./svg/MenuIcon";
+import HeroSection from "./HeroSection";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
