@@ -9,7 +9,7 @@ import Image from "next/image";
 const ExchangeBox = () => {
   const [amount, setAmount] = useState(1000);
   const [paymentMethod, setPaymentMethod] = useState("Interac e-Transfer"); // State for payment method
-  const exchangeRate = 60.5663;
+  const exchangeRate =  60.5663;
   const convertedAmount = (amount * exchangeRate).toFixed(2);
 
   const handleAmountChange = (e) => {
@@ -37,7 +37,7 @@ const ExchangeBox = () => {
             </label>
             <input
               type="number"
-              className="p-1 text-base bg-[#EDF7FE] sm:text-lg font-semibold focus:outline-none flex-1"
+              className="p-1 bg-[#EDF7FE] lg:text-[24px] font-medium focus:outline-none flex-1"
               value={amount}
               onChange={handleAmountChange}
               required
@@ -103,7 +103,7 @@ const ExchangeBox = () => {
             </label>
             <input
               type="text"
-              className="p-1 text-base bg-[#EDF7FE] sm:text-lg font-semibold focus:outline-none flex-1"
+              className="p-1 lg:text-[24px] font-medium  bg-[#EDF7FE] focus:outline-none flex-1"
               value={convertedAmount}
               readOnly
             />
@@ -134,7 +134,7 @@ const ExchangeBox = () => {
       {/* Payment Options */}
       <div className="flex flex-col sm:flex-row items-center justify-between py-2 relative">
         {/* First Div */}
-        <div className="rounded-lg font-poppins w-full sm:w-auto">
+        <div className="w-full rounded-lg font-poppins">
           <label className="text-[#727272] text-sm sm:text-[16px] font-medium">
             Pay with:
           </label>
@@ -143,19 +143,19 @@ const ExchangeBox = () => {
             value={paymentMethod}
             onChange={(e) => setPaymentMethod(e.target.value)}
           >
-            <option>E-Transfer</option>
-            <option>GTA</option>
+            <option>Interance E-Transfer</option>
+            <option>Cash pickup (within GTA)</option>
           </select>
           <p className="text-center text-[#1A5996] font-medium mt-1">Free</p>
         </div>
         {/* Responsive Border */}
-        <div className="w-full h-px bg-gray-300 my-3 sm:hidden"></div>{" "}
-        <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2 h-4/6 w-px bg-gray-300"></div>{" "}
+        {/* <div className="w-full h-px bg-gray-300 my-3 sm:hidden"></div>{" "}
+        <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2 h-4/6 w-px bg-gray-300"></div>{" "} */}
         <div className="mt-3 sm:mt-0 text-center text-[#727272] text-sm sm:text-[16px] font-medium">
           <span>
             Estimated delivery time: <br />
           </span>
-          <b className="text-[#1A5996]">Feb 2nd</b>
+          <b className="text-[#1A5996]">1-3 Days</b>
         </div>
       </div>
 
