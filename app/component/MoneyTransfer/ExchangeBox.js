@@ -26,7 +26,7 @@ const ExchangeBox = () => {
   return (
     <div
       className="bg-white p-4 sm:p-6 rounded-lg shadow-lg border border-[#2B95FA] max-w-[480px] w-full mx-auto"
-      data-aos="fade-up-left"
+      data-aos="fade-up"
     >
       {/* You Send Section */}
       <div className="bg-[#EDF7FE] flex items-center h-[74px] rounded-lg">
