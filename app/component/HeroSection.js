@@ -71,7 +71,7 @@ const HeroSection = () => {
           <Image
             src={herogroup}
             alt="Happy family"
-            className=" rounded-lg w-full"
+            className=" rounded-lg w-full h-full"
           />
         </div>
       </div>

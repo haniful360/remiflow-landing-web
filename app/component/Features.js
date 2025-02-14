@@ -50,7 +50,7 @@ const Features = () => {
     <div className="lg:h-[800px] font-poppins flex items-center justify-center bg-[url(/images/about_us.png)] bg-center bg-no-repeat bg-cover">
       <div className="py-12">
         <div className="max-w-[1250px] mx-auto flex flex-col lg:flex-row items-center gap-12">
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 flex-1">
+          <div className=" w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 flex-1 order-last lg:order-none">
             {features.map((feature, index) => (
               <div
                 key={index}
@@ -71,7 +71,7 @@ const Features = () => {
               </div>
             ))}
           </div>
-          <div className="lg:w-[480px] text-center lg:text-left">
+          <div className="lg:w-[480px]  text-center lg:text-left">
             <h2 className="text-2xl font-noto lg:text-[38px] font-semibold leading-[55px] text-[#FA6D2BF7]" data-aos="fade-up">
               Why Choose Remiflow?
             </h2>

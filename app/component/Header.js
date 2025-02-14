@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import logo from "@/public/images/logo.svg";
 import Link from "next/link";
@@ -8,19 +8,6 @@ import MenuIcon from "./svg/MenuIcon";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  // Prevent body scroll when menu is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflowX = "hidden";
-    } else {
-      document.body.style.overflowX = "auto";
-    }
-
-    return () => {
-      document.body.style.overflowX = "auto";
-    };
-  }, [isOpen]);
 
   return (
     <>
