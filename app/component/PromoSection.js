@@ -13,7 +13,7 @@ const PromoSection = () => {
         rates with zero fees.
       </p>
       <button className="bg-[#039D21] w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[415px] lg:h-[78px] rounded-[15px] font-poppins text-white font-semibold px-6 py-4 shadow-md hover:bg-green-700 transition" data-aos="fade-up">
-      Get Started Now
+      Contact Us Now
     </button>
       <p className="sm:text-base md:text-lg mt-8  lg:text-[24px] text-white font-medium mx-auto font-noto" data-aos="fade-up">
         Switch to RemiFlow Today – Send More, Save More – Zero Fees, Maximum

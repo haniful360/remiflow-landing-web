@@ -71,7 +71,7 @@ const MoneyTransfer = () => {
         </h1>
         <Image src={topline} alt="" className="block mx-auto mt-3" />
       </div>
-      <div className="flex flex-col md:flex-row items-center gap-16">
+      <div className="flex flex-col md:flex-row items-center gap-16 lg:gap-0">
         <div className="max-w-[590px] rounded-2xl md:mr-6 order-last lg:order-none">
           <div className="space-y-14">
             {steps.map((step, index) => (
