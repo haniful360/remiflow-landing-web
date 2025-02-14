@@ -47,7 +47,7 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="lg:h-[800px] font-poppins flex items-center justify-center bg-[url(/images/about_us.png)] bg-center bg-no-repeat bg-cover">
+    <div id="choose" className="lg:h-[800px] font-poppins flex items-center justify-center bg-[url(/images/about_us.png)] bg-center bg-no-repeat bg-cover">
       <div className="py-12">
         <div className="max-w-[1250px] mx-auto flex flex-col lg:flex-row items-center gap-12">
           <div className=" w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 flex-1 order-last lg:order-none">

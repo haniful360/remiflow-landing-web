@@ -5,16 +5,16 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="bg-gradient" >
+    <section id="herosection" className="bg-gradient" >
       <div className="lg:mt-[80px] max-w-[1250px] mx-auto w-full p-4 lg:flex items-center justify-between gap-4">
-        <div className="text-center md:text-left">
+        <div className="">
           <p className="font-poppins text-[#395664] lg:text-[20px]" data-aos="fade-left">
-            we don’t just transfer money – we maximize your savings.
+            We don’t just transfer money, we help you save more.
           </p>
           <h2 className="lg:w-[662px] font-noto text-4xl lg:text-[55px] lg:leading-[75px] font-bold mt-4" data-aos="fade-left">
             Send Money to India with the
             <span className="text-[#FA6D2B]">
-              Best Exchange <br /> Rates
+              Best <br /> Rates
             </span>
             &<span className="text-[#268BEB]"> Zero Fees</span>
           </h2>
@@ -23,9 +23,7 @@ const HeroSection = () => {
            text-[#395664] mt-4 max-w-full sm:max-w-[700px] lg:max-w-[800px] 
            mx-auto" data-aos="fade-left"
           >
-            We offer better rates than banks, Google, and Remitly with zero
-            transaction fees and a seamless process that lets you send money in
-            just a few taps.
+           Get better rates than banks, Google, and Remitly. No fees, No hassle. 
           </p>
 
           <p
@@ -33,8 +31,7 @@ const HeroSection = () => {
            text-[#395664] mt-4 max-w-full sm:max-w-[700px] lg:max-w-[800px] 
            mx-auto" data-aos="fade-left"
           >
-            First-time user? Verify your identity with KYC in just 1 <br />{" "}
-            minute to proceed.
+            <span className="text-semibold text-black">New here?</span> Verify your identity in just <span className="text-semibold text-black">1 minute</span> to start sending money.
           </p>
 
           {/* Buttons */}
