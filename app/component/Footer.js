@@ -52,10 +52,10 @@ const Footer = () => {
         <div className='font-poppins' data-aos="fade-up">
           <h3 className="text-lg font-semibold mb-2">Resources</h3>
           <ul className="space-y-2 text-[#1E1E1E]">
+            <li>Privacy Policy</li>
+            <li>Terms and Condition</li>
             <li>Blog</li>
-            <li>Best practices</li>
-            <li>Colors</li>
-            <li>Color wheel</li>
+            <li>Refer a Friend</li>
             <li>Support</li>
             <li>Developers</li>
             <li>Resource library</li>
