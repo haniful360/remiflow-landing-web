@@ -14,10 +14,10 @@ const HeroSection = () => {
         </p>
         <h2 className="lg:w-[662px] font-noto text-4xl lg:text-[55px] lg:leading-[75px] font-bold mt-4" data-aos="fade-left">
           Send Money to India with the
-          <span className="text-[#FA6D2B]">
-            Best <br /> Rates
+          <span className="text-[#FA6D2B]">{" "}
+            Best <br /> Rates {" "}
           </span>
-          &<span className="text-[#268BEB]"> Zero Fees</span>
+          & <span className="text-[#268BEB]"> Zero Fees</span>
         </h2>
         <p
           className="font-poppins text-base sm:text-lg lg:text-[24px] text-[#395664] mt-4 max-w-full sm:max-w-[700px] lg:max-w-[800px]"

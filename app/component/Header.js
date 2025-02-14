@@ -25,7 +25,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden font-poppins text-[16px] text-[#333333] md:flex items-center gap-6">
             <Link
               href="#herosection"
               className="text-gray-700 hover:text-[#2B95FA] transition"
@@ -38,6 +38,14 @@ const Header = () => {
             >
               About
             </Link>
+
+            <Link
+              href="#choose"
+              className="text-gray-700 hover:text-[#2B95FA] transition"
+            >
+              Contact Us
+            </Link>
+            
             <Link
               href="#faq"
               className="text-gray-700 hover:text-[#2B95FA] transition"
@@ -73,7 +81,7 @@ const Header = () => {
       <div
         className={`fixed top-0 left-0 w-[50%] sm:w-[50%] h-full bg-white shadow-lg transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 md:hidden flex flex-col items-start p-6 z-50`}
+        } transition-transform duration-300 md:hidden font-poppins text-[16px] text-[#333333] flex flex-col items-start p-6 z-50`}
       >
         <button
           className="self-end text-gray-700 mb-4"
@@ -87,6 +95,20 @@ const Header = () => {
           onClick={() => setIsOpen(false)}
         >
           Home
+        </Link>
+        <Link
+          href="About"
+          className="text-gray-700 py-2 text-lg w-full"
+          onClick={() => setIsOpen(false)}
+        >
+          About
+        </Link>
+        <Link
+          href="contact"
+          className="text-gray-700 py-2 text-lg w-full"
+          onClick={() => setIsOpen(false)}
+        >
+          Contact Us
         </Link>
         <Link
           href="#faq"

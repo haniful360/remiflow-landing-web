@@ -25,10 +25,10 @@ const MoneyTransfer = () => {
       title: "Share Details on WhatsApp",
       description: (
         <>
-          "You'll be redirected to WhatsApp to provide your{" "}
+          You'll be redirected to WhatsApp to provide your{" "}
           <span className="text-[#67B5FF]">recipient details </span> and receive{" "}
           <span className="text-[#67B5FF]">Interac e-Transfer</span>{" "}
-          instructions.",
+          instructions.
         </>
       ),
     },
@@ -37,11 +37,11 @@ const MoneyTransfer = () => {
       title: "Make Payment",
       description: (
         <>
-          "Complete the{" "}
+          Complete the{" "}
           <span className="text-[#67B5FF]">Interac e-Transfer</span> , and we'll
           keep you updated on the transaction status. New users must complete
           <span className="text-[#67B5FF]"> KYC</span> before their first
-          transfer."
+          transfer.
         </>
       ),
     },
@@ -50,9 +50,9 @@ const MoneyTransfer = () => {
       title: "Money Delivered in 1-3 Days",
       description: (
         <>
-          "Funds are <span className="text-[#67B5FF]">securely processed</span>{" "}
+          Funds are <span className="text-[#67B5FF]">securely processed</span>{" "}
           and delivered quickly. We'll notify you once the transfer is
-          complete."
+          complete.
         </>
       ),
     },

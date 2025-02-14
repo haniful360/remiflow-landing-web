@@ -71,12 +71,12 @@ const Features = () => {
               </div>
             ))}
           </div>
-          <div className="lg:w-[480px]  text-center lg:text-left">
+          <div className="lg:w-[480px] text-center lg:text-left">
             <h2 className="text-2xl font-noto lg:text-[38px] font-semibold leading-[55px] text-[#FA6D2BF7]" data-aos="fade-up">
               Why Choose Remiflow?
             </h2>
-            <div className="text-[#607D8B] text-center font-poppins leading-[31px] mt-4 text-lg">
-              <div className="flex items-start">
+            <div className="mt-4">
+              <div className="lg:flex items-start">
                 <div className="mr-2">
                   <Image
                     src={quote2}
@@ -87,7 +87,7 @@ const Features = () => {
                   />
 
                 </div>
-                <p className="max-w-[368px]" data-aos="fade-up">
+                <p className="max-w-[368px] ] text-center font-poppins leading-[31px] lg:text-[24px] text-[#607D8B]" data-aos="fade-up">
                   Built by immigrants, for <br /> immigrants – sending money{" "}
                   <br /> home isn’t just a transaction; <br /> it’s a
                   connection. We know <br /> every rupee counts. That’s <br />{" "}
@@ -97,7 +97,7 @@ const Features = () => {
                   most.
                 </p>
               </div>
-              <div className="flex justify-end relative lg:right-24 -mt-2">
+              <div className="flex justify-end relative lg:right-4 -mt-2">
                 <Image
                   src={quote1}
                   alt="Closing quote"
