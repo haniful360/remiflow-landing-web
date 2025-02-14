@@ -5,7 +5,6 @@ import logo from "@/public/images/logo.svg";
 import Link from "next/link";
 import CrossIcon from "./svg/CrossIcon";
 import MenuIcon from "./svg/MenuIcon";
-import HeroSection from "./HeroSection";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,10 +69,10 @@ const Header = () => {
         ></div>
       )}
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu (Left Side) */}
       <div
-        className={`fixed top-0 right-0 w-[50%] sm:w-[50%] h-full bg-white shadow-lg transform ${
-          isOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 left-0 w-[50%] sm:w-[50%] h-full bg-white shadow-lg transform ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 md:hidden flex flex-col items-start p-6 z-50`}
       >
         <button
@@ -83,7 +82,7 @@ const Header = () => {
           <CrossIcon />
         </button>
         <Link
-          href="#"
+          href="#herosection"
           className="text-gray-700 py-2 text-lg w-full"
           onClick={() => setIsOpen(false)}
         >
