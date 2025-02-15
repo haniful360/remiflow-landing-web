@@ -172,7 +172,7 @@ const ExchangeBox = () => {
           <span>
             Estimated delivery time: <br />
           </span>
-          <p className="text-[#1A5996]">1-3 Days</p>
+          <p className="text-[#1A5996] font-medium">1-3 Days</p>
         </div>
       </div>
 
