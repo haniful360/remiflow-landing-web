@@ -89,7 +89,7 @@ export default function FAQSection() {
                       <PlusIcon className="text-[#2B95FA] transition-transform duration-300 ease-in-out" />
                     )}
                   </div>
-                  <span className="text-[#2B95FA] font-semibold text-[16px] leading-5 font-outfit">
+                  <span className="text-[#2B95FA] font-semibold text-[16px] leading-5 font-poppins">
                     {faq.question}
                   </span>
                 </div>
@@ -102,7 +102,7 @@ export default function FAQSection() {
                   : "max-h-0 opacity-0"
               }`}
             >
-              <div className="mt-3 px-8 text-[#717880] text-[15px] font-outfit leading-7">
+              <div className="mt-3 px-8 text-[#717880] text-[15px] font-poppins leading-7">
                 {faq.answer}
               </div>
             </div>

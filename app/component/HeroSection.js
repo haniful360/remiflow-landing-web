@@ -32,7 +32,7 @@ const HeroSection = () => {
             className="font-poppins text-base sm:text-lg lg:text-[24px] text-[#395664] mt-4 max-w-full sm:max-w-[700px] lg:max-w-[800px]"
             data-aos="fade-left"
           >
-            New here? Verify your identity in just1 minute to start sending
+            New here? Verify your identity in just 1 minute to start sending
             money.
           </p>
 
