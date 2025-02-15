@@ -2,7 +2,7 @@ import React from "react";
 
 const PromoSection = () => {
   return (
-    <div className="bg-[#0056A8] flex justify-center flex-col lg:h-[602px]">
+    <section id="contact" className="bg-[#0056A8] flex justify-center flex-col lg:h-[602px]">
         <div className=" text-center py-12 px-6 ">
       <h2 className="text-[#FDFDFD] text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-semibold leading-[49px] font-noto mb-8" data-aos="fade-up">
         Start Sending Money & Saving Today!
@@ -20,7 +20,7 @@ const PromoSection = () => {
         Happiness!
       </p>
     </div>
-    </div>
+    </section>
   );
 };
 

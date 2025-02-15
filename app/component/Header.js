@@ -41,7 +41,7 @@ const Header = () => {
             </Link>
 
             <Link
-              href="#choose"
+              href="#contact"
               className="text-gray-700 hover:text-[#2B95FA] transition"
             >
               Contact Us
