@@ -41,13 +41,6 @@ const HeroSection = () => {
             className="font-poppins mt-6 flex flex-col sm:flex-row gap-4"
             data-aos="fade-left"
           >
-            {/* <Link href="" target="_blank">
-            <button
-              className="text-base sm:text-lg lg:text-[26px] w-full sm:w-[200px] lg:w-[250px] h-[50px] sm:h-[60px] lg:h-[68px] rounded-full lg:rounded-[34px] bg-[#1D242D] font-medium text-white px-6 py-3 hover:bg-[#2c3643] transition-colors"
-            >
-              Complete KYC
-            </button>
-          </Link> */}
             <Link href="#moneytransfer">
               <button className="text-base sm:text-lg lg:text-[26px] w-full sm:w-[200px] lg:w-[250px] h-[50px] sm:h-[60px] lg:h-[68px] rounded-full lg:rounded-[34px] bg-[#268BEB] font-medium text-white px-6 py-3 hover:bg-[#1a6bbf] transition-colors">
                 Send Money

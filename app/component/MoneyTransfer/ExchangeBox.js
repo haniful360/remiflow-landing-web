@@ -37,7 +37,7 @@ const ExchangeBox = () => {
             </label>
             <input
               type="number"
-              className="p-1 bg-[#EDF7FE] lg:text-[24px] font-medium focus:outline-none flex-1"
+              className=" p-1 bg-[#EDF7FE] text-[20px] lg:text-[24px] font-medium focus:outline-none flex-1"
               value={amount}
               onChange={handleAmountChange}
               required
@@ -103,7 +103,7 @@ const ExchangeBox = () => {
             </label>
             <input
               type="text"
-              className="p-1 lg:text-[24px] font-medium  bg-[#EDF7FE] focus:outline-none flex-1"
+              className="p-1 text-[20px] lg:text-[24px] font-medium  bg-[#EDF7FE] focus:outline-none flex-1"
               value={convertedAmount}
               readOnly
             />
