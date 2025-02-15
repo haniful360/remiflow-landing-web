@@ -31,18 +31,21 @@ const ExchangeBox = () => {
       {/* You Send Section */}
       <div className="bg-[#EDF7FE] flex items-center h-[74px] rounded-lg">
         <div className="flex items-center justify-between p-2 rounded-lg mt-2">
+          {/* Left Section */}
           <div className="flex-1 pl-2">
             <label className="text-[#989898] text-[12px] font-poppins font-medium">
               You send
             </label>
             <input
               type="number"
-              className=" p-1 bg-[#EDF7FE] text-[20px] lg:text-[24px] font-medium focus:outline-none flex-1"
+              className="p-1 bg-[#EDF7FE] text-[20px] lg:text-[24px] font-medium focus:outline-none w-full"
               value={amount}
               onChange={handleAmountChange}
               required
             />
           </div>
+
+          {/* Right Section */}
           <div className="flex-1">
             <div className="flex items-center justify-end gap-2 border-l pl-2">
               <Image
@@ -96,18 +99,21 @@ const ExchangeBox = () => {
 
       {/* They Get Section */}
       <div className="bg-[#EDF7FE] flex items-center h-[74px] rounded-lg">
-        <div className="flex items-center justify-between p-2 rounded-lg  mt-2">
+        <div className="flex items-center justify-between p-2 rounded-lg mt-2">
+          {/* Left Section */}
           <div className="flex-1 pl-2">
             <label className="text-[#989898] text-[12px] font-poppins font-medium">
               They get
             </label>
             <input
               type="text"
-              className="p-1 text-[20px] lg:text-[24px] font-medium  bg-[#EDF7FE] focus:outline-none flex-1"
+              className="p-1 text-[20px] lg:text-[24px] font-medium bg-[#EDF7FE] focus:outline-none w-full"
               value={convertedAmount}
               readOnly
             />
           </div>
+
+          {/* Right Section */}
           <div className="flex-1">
             <div className="flex items-center justify-end gap-2 border-l pl-2">
               <Image
