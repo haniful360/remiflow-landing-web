@@ -16,7 +16,7 @@ const HeroSection = () => {
             We don’t just transfer money, we help you save more.
           </p>
           <h2
-            className="w-full lg:w-[662px] font-noto text-2xl md:text-4xl lg:text-[55px] leading-8 md:leading-[48px] lg:leading-[75px] font-bold mt-4"
+            className="w-full lg:w-[662px] font-noto text-3xl md:text-4xl lg:text-[55px] leading-8 md:leading-[48px] lg:leading-[75px] font-bold mt-4"
             data-aos="fade-left"
           >
             Send Money to India with the
