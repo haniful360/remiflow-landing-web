@@ -90,7 +90,7 @@ const MoneyTransfer = () => {
                 <h4 className="text-lg py-2 lg:text-[24px] font-poppins font-semibold text-[#000000] mt-2">
                   {step.title}
                 </h4>
-                <p className="text-[#5F5F5F] text-[20px] font-poppins leading-[22PX] mt-1">
+                <p className="text-[#5F5F5F] lg:text-[20px] font-poppins leading-[22PX] mt-1">
                   {step.description}
                 </p>
               </div>

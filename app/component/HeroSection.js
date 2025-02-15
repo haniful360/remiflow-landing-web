@@ -9,12 +9,6 @@ const HeroSection = () => {
       <div className="lg:mt-[80px] max-w-[1250px] mx-auto w-full p-4 lg:flex items-center justify-between gap-4">
         {/* Text Content */}
         <div className="flex-1">
-          <p
-            className="font-poppins text-[#395664] text-lg lg:text-[20px]"
-            data-aos="fade-left"
-          >
-            We don’t just transfer money, we help you save more.
-          </p>
           <h2
             className="w-full lg:w-[662px] font-noto text-3xl md:text-4xl lg:text-[55px] leading-[38px] lg:leading-[75px] font-bold mt-4"
             data-aos="fade-left"
