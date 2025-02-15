@@ -35,21 +35,76 @@ const Footer = () => {
         <div className="font-poppins" data-aos="fade-up">
           <h3 className="text-lg font-semibold mb-2">Use cases</h3>
           <ul className="space-y-2 text-[#1E1E1E]">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Send Money</li>
-            <li>View Rates</li>
-            <li>Contact Us</li>
-            <li>FAQ</li>
+            <li>
+              <Link href="/" className="hover:text-[#2B95FA] transition">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="#about" className="hover:text-[#2B95FA] transition">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#send-money"
+                className="hover:text-[#2B95FA] transition"
+              >
+                Send Money
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#view-rates"
+                className="hover:text-[#2B95FA] transition"
+              >
+                View Rates
+              </Link>
+            </li>
+            <li>
+              <Link href="#contact" className="hover:text-[#2B95FA] transition">
+                Contact Us
+              </Link>
+            </li>
+            <li>
+              <Link href="#faq" className="hover:text-[#2B95FA] transition">
+                FAQ
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="font-poppins" data-aos="fade-up">
           <h3 className="text-lg font-semibold mb-2">Explore</h3>
           <ul className="space-y-2 text-[#1E1E1E]">
-            <li>Privacy Policy</li>
-            <li>Terms and Condition</li>
-            <li>Blog</li>
-            <li>Refer a Friend</li>
+            <li>
+              <Link
+                href="#privacy-policy"
+                className="hover:text-[#2B95FA] transition"
+              >
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#terms-and-conditions"
+                className="hover:text-[#2B95FA] transition"
+              >
+                Terms and Condition
+              </Link>
+            </li>
+            <li>
+              <Link href="#blog" className="hover:text-[#2B95FA] transition">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#refer-a-friend"
+                className="hover:text-[#2B95FA] transition"
+              >
+                Refer a Friend
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
