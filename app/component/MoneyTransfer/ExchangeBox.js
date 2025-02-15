@@ -9,7 +9,7 @@ import Image from "next/image";
 const ExchangeBox = () => {
   const [amount, setAmount] = useState(1000);
   const [paymentMethod, setPaymentMethod] = useState("Interac e-Transfer"); // State for payment method
-  const exchangeRate =  60.5663;
+  const exchangeRate = 60.5663;
   const convertedAmount = (amount * exchangeRate).toFixed(2);
 
   const handleAmountChange = (e) => {
@@ -132,26 +132,37 @@ const ExchangeBox = () => {
       </p>
 
       {/* Payment Options */}
-      <div className="flex flex-col sm:flex-row items-center justify-between py-2 relative">
+      <div className="flex flex-col font-poppins sm:flex-row md:items-center justify-between py-2 relative">
         {/* First Div */}
-        <div className="w-full rounded-lg font-poppins">
-          <label className="text-[#727272] text-sm sm:text-[16px] font-medium">
+        <div className="lg:w-[50%] rounded-lg font-poppins">
+          <label className="text-[#727272] text-[14px] sm:text-[16px] font-medium">
             Pay with:
           </label>
-          <select
-            className="p-1 rounded text-green-600 font-semibold focus:outline-none"
-            value={paymentMethod}
-            onChange={(e) => setPaymentMethod(e.target.value)}
-          >
-            <option>Interance E-Transfer</option>
-            <option>Cash pickup (within GTA)</option>
-          </select>
-          <p className="text-center text-[#1A5996] font-medium mt-1">Free</p>
+          {/* This div will display as flex on mobile and be hidden on larger devices */}
+          <div className="flex lg:flex-col justify-between">
+            <div>
+              <select
+                className="rounded text-[14px] sm:text-[16px] text-green-600 font-medium focus:outline-none"
+                value={paymentMethod}
+                onChange={(e) => setPaymentMethod(e.target.value)}
+              >
+                <option className="text-[14px] sm:text-[16px]">
+                  Interance E-Transfer
+                </option>
+                <option className="text-[14px] sm:text-[16px]">
+                  Cash pickup (within GTA)
+                </option>
+              </select>
+            </div>
+            <p className="text-center text-[#1A5996] font-medium mt-1 text-[14px] sm:text-[16px]">
+              Free
+            </p>
+          </div>
         </div>
         {/* Responsive Border */}
-        {/* <div className="w-full h-px bg-gray-300 my-3 sm:hidden"></div>{" "}
-        <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2 h-4/6 w-px bg-gray-300"></div>{" "} */}
-        <div className="mt-3 sm:mt-0 text-center text-[#727272] text-sm sm:text-[16px] font-medium">
+        <div className="w-full h-[0.75px] bg-[#E3E5EA] my-3 sm:hidden"></div>
+        <div className="hidden ml-[14px] sm:block absolute left-1/2 transform -translate-x-1/2 h-4/6 w-[.75px] bg-[#E3E5EA]"></div>
+        <div className="lg:w-[45%] lg:mt-3 text-left md:text-center sm:mt-0 text-[#727272] text-[14px] sm:text-[16px] font-medium">
           <span>
             Estimated delivery time: <br />
           </span>
