@@ -164,7 +164,7 @@ const ExchangeBox = () => {
         onClick={lockInRate}
         className="send_money_btn w-full mt-4 h-12 sm:h-[74px] text-lg sm:text-[24px] font-poppins text-white rounded-lg hover:bg-blue-700 transition"
       >
-        Send Money
+        Lock in Rate & Continue
       </button>
     </div>
   );

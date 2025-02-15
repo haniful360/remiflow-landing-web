@@ -58,7 +58,7 @@ const MoneyTransfer = () => {
     },
   ];
   return (
-    <div
+    <section id='moneytransfer'
       className="px-4 lg:px-0 max-w-[1250px] mx-auto mt-12 lg:mt-[100px]"
       data-aos="fade-up"
     >
@@ -99,7 +99,7 @@ const MoneyTransfer = () => {
         </div>
         <ExchangeBox />
       </div>
-    </div>
+    </section>
   );
 };
 

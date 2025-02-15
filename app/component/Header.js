@@ -97,14 +97,14 @@ const Header = () => {
           Home
         </Link>
         <Link
-          href="About"
+          href="#About"
           className="text-gray-700 py-2 text-lg w-full"
           onClick={() => setIsOpen(false)}
         >
           About
         </Link>
         <Link
-          href="contact"
+          href="#contact"
           className="text-gray-700 py-2 text-lg w-full"
           onClick={() => setIsOpen(false)}
         >
