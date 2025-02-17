@@ -2,17 +2,18 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import logo from "@/public/images/logo.svg";
-// import logo from "@/public/images/logo.svg";
+import mobileLogo from "@/public/images/mobile-logo.svg";
+import call from "@/public/images/call.svg";
+import menu from "@/public/images/menu.svg";
 import Link from "next/link";
 import CrossIcon from "./svg/CrossIcon";
-import MenuIcon from "./svg/MenuIcon";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <header className="w-full h-[80px] md:h-[100px] flex justify-center shadow-md bg-white">
+      <header className="w-full  h-[46px] lg:h-[80px]  md:h-[100px] flex justify-center shadow-md bg-white">
         <div className="max-w-[1250px] w-full flex justify-between items-center px-4 md:px-6">
           {/* Logo */}
           <Link href="/" className="flex items-center">
@@ -21,7 +22,14 @@ const Header = () => {
               alt="Logo"
               width={180}
               height={50}
-              className="w-[140px] md:w-[180px]"
+              className="md:w-[180px] hidden md:block"
+            />
+            <Image
+              src={mobileLogo}
+              alt="Logo"
+              width={93}
+              height={28}
+              className="w-[93px] h-[24.44px] md:hidden block"
             />
           </Link>
 
@@ -46,7 +54,7 @@ const Header = () => {
             >
               Contact Us
             </Link>
-            
+
             <Link
               href="#faq"
               className="text-gray-700 hover:text-[#2B95FA] transition"
@@ -59,14 +67,22 @@ const Header = () => {
               </button>
             </Link>
           </nav>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-gray-700 focus:outline-none"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <CrossIcon /> : <MenuIcon />}
-          </button>
+          <div className="flex gap-3">
+            <Link href="#">
+              <Image src={call} width={24} height={24} alt="" />
+            </Link>
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden text-gray-700 focus:outline-none"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? (
+                <CrossIcon />
+              ) : (
+                <Image src={menu} width={24} height={24} alt="" />
+              )}
+            </button>
+          </div>
         </div>
       </header>
 
@@ -80,7 +96,7 @@ const Header = () => {
 
       {/* Mobile Menu (Left Side) */}
       <div
-        className={`fixed top-0 left-0 w-[50%] sm:w-[50%] h-full bg-white shadow-lg transform ${
+        className={`fixed top-0 left-0 w-[50%]  h-full sm:w-[50%] bg-white shadow-lg transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 md:hidden font-poppins text-[16px] text-[#333333] flex flex-col items-start p-6 z-50`}
       >
