@@ -59,17 +59,17 @@ const MoneyTransfer = () => {
   ];
   return (
     <section id='moneytransfer'
-      className="px-4 lg:px-0 max-w-[1250px] mx-auto mt-12 lg:mt-[100px]"
+      className="px-6 lg:px-0 max-w-[1250px] mx-auto mt-12 lg:mt-[100px]"
       data-aos="fade-up"
     >
-      <div className="text-center mb-[100px]">
-        <h2 className="text-[#67B5FF] lg:text-[32px]  font-medium font-poppins text-lg">
+      <div className="text-center mb-[50px] md:mb-[100px]">
+        <h2 className="text-[#67B5FF] lg:text-[32px] text-[18px] leading-[27px] font-medium font-poppins">
           Just 4 easy steps
         </h2>
-        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-[38px] font-noto font-semibold mt-2 text-center">
+        <h1 className="text-[24px] sm:text-2xl md:text-3xl lg:text-[38px] font-noto font-semibold mt-2 text-center">
           How to <span className="text-[#039D21]">send money</span> to India?
         </h1>
-        <Image src={topline} alt="" className="block mx-auto mt-3" />
+        <Image src={topline} alt="" className="w-5/6 lg:w-5/12 block  mx-auto mt-1 lg:mt-3" />
       </div>
       <div className="flex flex-col md:flex-row items-center gap-16 lg:gap-0">
         <div className="max-w-[590px] rounded-2xl md:mr-6 order-last lg:order-none">

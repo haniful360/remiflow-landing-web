@@ -13,15 +13,12 @@ const HeroSection = () => {
             className="lg:w-[662px] text-[#FDFDFD] md:text-black font-noto text-[28px] leading-[36.4px] md:text-4xl lg:text-[55px] lg:leading-[75px] font-semibold md:font-bold"
             // data-aos="fade-left"
           >
-            Send Money to India with The <span className="md:text-[#FA6D2B]">
-              {" "} Best Rates{" "}
-            </span>
-           <br className="hidden md:block" /> & <span className="lg:text-[#268BEB]"> Zero Fees</span>
+            Send Money to India with The{" "}
+            <span className="md:text-[#FA6D2B]"> Best Rates </span>
+            <br className="hidden md:block" /> &{" "}
+            <span className="lg:text-[#268BEB]"> Zero Fees</span>
           </h2>
-          <p
-            className="max-w-[364px] mx-auto font-poppins font-normal text-[#FDFDFD] text-[16px] md:text-[#395664] sm:text-lg lg:text-[24px] my-6 md:mt-4 sm:max-w-[700px] lg:max-w-[800px]"
-            // data-aos="fade-left"
-          >
+          <p className="w-full max-w-[364px] text-center md:text-left font-poppins font-normal text-[#FDFDFD] text-[16px] md:text-[#395664] sm:text-lg lg:text-[24px] my-6 md:mt-4 sm:max-w-[700px] lg:max-w-[800px]">
             Get better rates than banks, Google, and Remitly. No fees, No
             hassle.
           </p>

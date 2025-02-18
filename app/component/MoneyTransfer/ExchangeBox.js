@@ -4,12 +4,14 @@ import CA from "@/public/images/money/CA.svg";
 import IN from "@/public/images/money/IN.svg";
 import downarrow from "@/public/images/money/down-arrow.svg";
 import left from "@/public/images/money/left.svg";
+import up_down from "@/public/images/updown.svg";
 import Image from "next/image";
+import RightArrowIcon from "../svg/RightArrowIcon";
 
 const ExchangeBox = () => {
   const [amount, setAmount] = useState(1000);
   const [paymentMethod, setPaymentMethod] = useState("Interac e-Transfer"); // State for payment method
-  const exchangeRate = 60.5663;
+  const exchangeRate = 60.04;
   const convertedAmount = (amount * exchangeRate).toFixed(2);
 
   const handleAmountChange = (e) => {
@@ -25,108 +27,140 @@ const ExchangeBox = () => {
 
   return (
     <div
-      className="bg-white p-4 sm:p-6 rounded-lg shadow-lg border border-[#2B95FA] max-w-[480px] w-full mx-auto"
-      data-aos="fade-up"
+      className="bg-white p-4 rounded-lg shadow-lg border border-[#2B95FA] max-w-[480px] w-full mx-auto"
+      // data-aos="fade-up"
     >
       {/* You Send Section */}
-      <div className="bg-[#EDF7FE] flex items-center h-[74px] rounded-lg">
-        <div className="flex items-center justify-between p-2 rounded-lg mt-2">
+      <div className="bg-[#EDF7FE] flex items-center lg:h-[74px] rounded-lg">
+        <div className="relative flex items-center justify-between p-4 rounded-lg h-[56px]">
           {/* Left Section */}
-          <div className="flex-1 pl-2">
-            <label className="text-[#989898] text-[12px] font-poppins font-medium">
+          <div className="flex-1">
+            <label className="text-[#989898] text-[12px] leading-[18px] font-poppins font-medium">
               You send
             </label>
             <input
               type="number"
-              className="p-1 bg-[#EDF7FE] text-[20px] lg:text-[24px] font-medium focus:outline-none w-full"
+              className="bg-[#EDF7FE] text-[#333333] text-[20px] lg:text-[24px] font-medium leading-[30px] focus:outline-none w-full"
               value={amount}
               onChange={handleAmountChange}
               required
             />
           </div>
-
+          <div className=" absolute left-1/2 transform -translate-x-1/2 h-5/6 w-[.76px] bg-[#E3E5EA]"></div>
           {/* Right Section */}
           <div className="flex-1">
-            <div className="flex items-center justify-end gap-2 border-l pl-2">
+            <div className="flex items-center justify-end gap-2">
               <Image
                 src={CA}
                 alt="Canada Flag"
                 width={30}
                 height={30}
-                className="w-6 h-6 sm:w-8 sm:h-8"
+                className="w-[30px] h-[29px] sm:w-8 sm:h-8"
               />
-              <span className="text-gray-800 font-semibold hidden sm:block">
+              <span className="text-[#000000] text-[12px] lg:text-[15px] font-normal">
                 CAD
               </span>
-              <Image src={downarrow} alt="Down Arrow" width={16} height={14} />
+              <Image
+                src={downarrow}
+                alt="Down Arrow"
+                width={14}
+                height={14}
+                className="w-3 h-2 lg:w-[14px] lg:h-[14px]"
+              />
             </div>
           </div>
         </div>
       </div>
 
+      {/* for mobile */}
+
+      <div className="md:hidden ">
+      <div className="flex items-center gap-3 py-5 ml-5">
+        <div className="bg-[#2277C8] w-[42px] h-[42px] rounded-full flex items-center justify-center">
+          <Image src={up_down} className="w-[20px] h-[20px]"alt="" />
+        </div>
+        <div className="flex gap-4 text-[#038D1E] font-poppins text-[16px] leading-[17.6px]">
+          <span>1.00 CAD </span>
+          <RightArrowIcon />
+          <span> 60.04 INR</span>
+        </div>
+      </div>
+      </div>
+
       {/* Conversion Details Section */}
-      <div className="flex flex-col sm:flex-row gap-2 py-4 text-gray-700">
-        <Image
-          className="sm:ml-5 mx-auto hidden md:block"
-          src={left}
-          alt="Left Icon"
-        />
-        <div className="w-full space-y-2 font-poppins text-sm sm:text-[18px]">
-          <p className="flex justify-between text-[#333333] font-medium">
-            <span>Fees*</span>
-            <span>0 CAD</span>
-          </p>
-          <div className="text-[#989898] leading-7 border-b-[1.25px] pb-1 border-[#ECEEF3]">
-            <p className="flex justify-between">
-              <span>Transaction fee</span>
+      <div className="hidden md:block ">
+        <div className="flex flex-col sm:flex-row gap-2 py-4 text-gray-700">
+          <Image
+            className="sm:ml-5 mx-auto hidden md:block"
+            src={left}
+            alt="Left Icon"
+          />
+          <div className="w-full space-y-2 font-poppins text-sm sm:text-[18px]">
+            <p className="flex justify-between text-[#333333] font-medium">
+              <span>Fees*</span>
               <span>0 CAD</span>
             </p>
-            <p className="flex justify-between">
-              <span>Bank transfer fee</span>
-              <span>0 CAD</span>
+            <div className="text-[#989898] leading-7 border-b-[1.25px] pb-1 border-[#ECEEF3]">
+              <p className="flex justify-between">
+                <span>Transaction fee</span>
+                <span>0 CAD</span>
+              </p>
+              <p className="flex justify-between">
+                <span>Bank transfer fee</span>
+                <span>0 CAD</span>
+              </p>
+            </div>
+            <p className="flex justify-between font-semibold border-b-[1.25px] pt-[6px] pb-3 mt- border-[#ECEEF3]">
+              <span>Amount to convert</span>
+              <span>{amount} INR</span>
+            </p>
+            <p className="flex justify-between font-semibold pt-3">
+              <span>Exchange rate</span>
+              <span>{convertedAmount} INR</span>
             </p>
           </div>
-          <p className="flex justify-between font-semibold border-b-[1.25px] pt-[6px] pb-3 mt- border-[#ECEEF3]">
-            <span>Amount to convert</span>
-            <span>{amount} INR</span>
-          </p>
-          <p className="flex justify-between font-semibold pt-3">
-            <span>Exchange rate</span>
-            <span>{convertedAmount} INR</span>
-          </p>
         </div>
       </div>
 
       {/* They Get Section */}
-      <div className="bg-[#EDF7FE] flex items-center h-[74px] rounded-lg">
-        <div className="flex items-center justify-between p-2 rounded-lg mt-2">
+      <div className="bg-[#EDF7FE] flex items-center lg:h-[74px] rounded-lg">
+        <div className="relative flex items-center justify-between p-4 rounded-lg h-[56px] w-full">
           {/* Left Section */}
-          <div className="flex-1 pl-2">
-            <label className="text-[#989898] text-[12px] font-poppins font-medium">
+          <div className="flex-1">
+            <label className="text-[#989898] text-[12px] leading-[18px] font-poppins font-medium">
               They get
             </label>
             <input
               type="text"
-              className="p-1 text-[20px] lg:text-[24px] font-medium bg-[#EDF7FE] focus:outline-none w-full"
+              className="bg-[#EDF7FE] text-[#333333] text-[20px] lg:text-[24px] font-medium leading-[30px] focus:outline-none w-full"
               value={convertedAmount}
               readOnly
             />
           </div>
 
+          {/* Vertical Divider */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-5/6 w-[.76px] bg-[#E3E5EA]"></div>
+
           {/* Right Section */}
           <div className="flex-1">
-            <div className="flex items-center justify-end gap-2 border-l pl-2">
+            <div className="flex items-center justify-end gap-2">
               <Image
                 src={IN}
                 alt="India Flag"
                 width={30}
                 height={30}
-                className="w-6 h-6 sm:w-8 sm:h-8"
+                className="w-[30px] h-[29px] sm:w-8 sm:h-8"
               />
-              <span className="text-gray-800 font-semibold hidden sm:block">
+              <span className="text-[#000000] text-[12px] lg:text-[15px] font-normal">
                 INR
               </span>
-              <Image src={downarrow} alt="Down Arrow" width={16} height={14} />
+              <Image
+                src={downarrow}
+                alt="Down Arrow"
+                width={14}
+                height={14}
+                className="w-3 h-2 lg:w-[14px] lg:h-[14px]"
+              />
             </div>
           </div>
         </div>

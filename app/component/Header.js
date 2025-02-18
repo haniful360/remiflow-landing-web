@@ -67,9 +67,9 @@ const Header = () => {
               </button>
             </Link>
           </nav>
-          <div className="flex gap-3">
+          <div className="md:hidden flex gap-3 ">
             <Link href="#">
-              <Image src={call} width={24} height={24} alt="" />
+              <Image className="md:hidden" src={call} width={24} height={24} alt="" />
             </Link>
             {/* Mobile Menu Button */}
             <button
@@ -96,8 +96,8 @@ const Header = () => {
 
       {/* Mobile Menu (Left Side) */}
       <div
-        className={`fixed top-0 left-0 w-[50%]  h-full sm:w-[50%] bg-white shadow-lg transform ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-0 right-0 w-[50%] h-full sm:w-[50%] bg-white shadow-lg transform ${
+          isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 md:hidden font-poppins text-[16px] text-[#333333] flex flex-col items-start p-6 z-50`}
       >
         <button
