@@ -37,13 +37,13 @@ export default function FAQSection() {
   return (
     <div
       id="faq"
-      className="max-w-[1250px] lg:h-[611px] mx-auto px-4 py-10 flex flex-col items-center md:flex-row gap-10"
+      className="max-w-[1250px] lg:h-[611px] mx-auto px-6 py-10 flex flex-col items-center md:flex-row gap-10"
     >
       {/* Left Section (Title & Description) */}
       <div className="md:w-1/2 space-y-6 ">
         {/* Subheading */}
         <h2
-          className="text-[#039D21] font-semibold uppercase text-sm text-[16px] tracking-widest mb-2"
+          className="text-[#039D21] font-poppins leading-[20px] font-semibold uppercase text-[16px] tracking-widest lg:mb-2"
           data-aos="fade-up"
         >
           Frequently Asked Questions
@@ -51,7 +51,7 @@ export default function FAQSection() {
 
         {/* Main Heading */}
         <h1
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-[50px] font-semibold leading-tight sm:leading-[40px] md:leading-[50px] lg:leading-[55px] font-outfit text-[#2B95FA] mb-4"
+          className="text-[24px] leading-[30px] sm:text-3xl md:text-4xl lg:text-[50px] font-semibold sm:leading-[40px] md:leading-[50px] lg:leading-[55px] font-outfit text-[#2B95FA] mb-4"
           data-aos="fade-up"
         >
           Got Questions? We’ve Got Answers!
@@ -59,7 +59,7 @@ export default function FAQSection() {
 
         {/* Description */}
         <p
-          className="text-[#717880] max-w-md font-outfit text-[16px] leading-[28px]"
+          className="text-[#717880] max-w-md font-outfit text-[14px] lg:text-[16px] leading-[28px]"
           data-aos="fade-up"
         >
           Curious about something? We're here to help! Find clear, reliable
@@ -81,7 +81,7 @@ export default function FAQSection() {
               onClick={() => toggleFAQ(index)}
             >
               <div className="">
-                <div className="flex items-center gap-4 flex-1">
+                <div className="flex items-center gap-2 lg:gap-4">
                   <div className="bg-blue-400 lg:w-[45px] lg:h-[45px] flex items-center justify-center transition-all duration-300 ease-in-out p-1 lg:p-0">
                     {openIndex === index ? (
                       <MinusIcon className="text-[#2B95FA] transition-transform duration-300 ease-in-out rotate-180" />
@@ -89,7 +89,7 @@ export default function FAQSection() {
                       <PlusIcon className="text-[#2B95FA] transition-transform duration-300 ease-in-out" />
                     )}
                   </div>
-                  <span className="text-[#2B95FA] font-semibold text-[16px] leading-5 font-poppins">
+                  <span className="text-[#2B95FA] font-semibold text-[10px] lg:text-[16px] leading-5 font-poppins">
                     {faq.question}
                   </span>
                 </div>
@@ -102,7 +102,7 @@ export default function FAQSection() {
                   : "max-h-0 opacity-0"
               }`}
             >
-              <div className="mt-3 px-8 text-[#717880] text-[15px] font-poppins leading-7">
+              <div className="mt-3 px-8 text-[#717880] text-[10px] lg:text-[15px] font-poppins leading-7">
                 {faq.answer}
               </div>
             </div>

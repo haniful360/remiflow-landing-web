@@ -15,7 +15,7 @@ const MoneyTransfer = () => {
       description: (
         <>
           Use our real-time currency{" "}
-          <span className="text-[#67B5FF]">calculator</span> to see how much
+          <span className="text-[#67B5FF] font-medium">calculator</span> to see how much
           your recipient will receive. Click Send Money to proceed.
         </>
       ),

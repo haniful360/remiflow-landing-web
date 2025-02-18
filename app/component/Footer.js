@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="font-poppins" data-aos="fade-up">
-          <h3 className="text-lg font-semibold mb-2">Use cases</h3>
+          <h3 className="text-[16px] text-[#26769C] font-semibold mb-2">Useful Links</h3>
           <ul className="space-y-2 text-[#1E1E1E]">
             <li>
               <Link href="/" className="hover:text-[#2B95FA] transition">
@@ -74,7 +74,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="font-poppins" data-aos="fade-up">
-          <h3 className="text-lg font-semibold mb-2">Explore</h3>
+          <h3 className="text-[16px] text-[#26769C] font-semibold mb-2">Explore</h3>
           <ul className="space-y-2 text-[#1E1E1E]">
             <li>
               <Link
