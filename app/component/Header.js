@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import logo from "@/public/images/logo.svg";
-import mobileLogo from "@/public/images/mobile-logo.svg";
+import mobileLogo from "@/public/images/mobile_logo.png";
 import call from "@/public/images/call.svg";
 import menu from "@/public/images/menu.svg";
 import Link from "next/link";
@@ -27,9 +27,8 @@ const Header = () => {
             <Image
               src={mobileLogo}
               alt="Logo"
-              width={93}
-              height={28}
-              className="w-[93px] h-[24.44px] md:hidden block"
+              
+              className="md:hidden block"
             />
           </Link>
 

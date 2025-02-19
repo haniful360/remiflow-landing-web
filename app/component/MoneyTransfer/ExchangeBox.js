@@ -176,29 +176,30 @@ const ExchangeBox = () => {
         <span className="leading-[21px]">0 CAD</span>
       </div>
 
-      <p className="text-[#727272] mt-4 font-poppins text-[12px] md:text-[16px] font-medium">
-        Pay with:
-      </p>
       {/* Payment Options */}
-      <div className="flex  font-poppins sm:flex-row items-center justify-between pb-4 pt-1 relative">
+      <div className="px-4 flex  sm:flex-row items-center justify-between pb-4 pt-4  font-poppins relative">
         {/* First Div */}
-        <div className="max-w-[50%] rounded-lg font-poppins">
-          {/* This div will display as flex on mobile and be hidden on larger devices */}
-          <select
-            className="w-[150px] md:w-full truncate p-1 rounded text-[12px] md:text-[16px] text-green-600 font-medium focus:outline-none"
-            value={paymentMethod}
-            onChange={(e) => setPaymentMethod(e.target.value)}
-          >
-            <option>Interance E-Transfer</option>
-            <option>Cash pickup (within GTA)</option>
-          </select>
+        <div className="max-w-[50%] rounded-lg font-poppins"> 
+          <div className="flex items-center">
+            <p className="text-[#727272]  font-poppins text-[12px] md:text-[16px] font-medium">
+              Pay with:
+            </p>
+            <select
+              className="w-[86px] md:w-3/6 truncate py-[2px] rounded text-[12px] md:text-[16px] text-green-600 font-medium focus:outline-none "
+              value={paymentMethod}
+              onChange={(e) => setPaymentMethod(e.target.value)}
+            >
+              <option>E-Transfer</option>
+              <option className="truncate">Cash pickup (within GTA)</option>
+            </select>
+          </div>
 
           <p className="text-center text-[#1A5996] font-medium text-[12px] md:text-[16px]">
             Free
           </p>
         </div>
         {/* Responsive Border */}
-        <div className="ml-2 sm:block absolute left-1/2 transform -translate-x-1/2 h-4/6 w-[.75px] bg-[#E3E5EA]"></div>
+        <div className="sm:block absolute left-1/2 transform -translate-x-1/2 h-4/6 w-[.75px] bg-[#E3E5EA]"></div>
         <div className="max-w-[45%] text-center text-[#727272] md:text-[16px] font-medium">
           <span className="text-[12px] text-center md:text-[16px] ">
             Estimated delivery time:

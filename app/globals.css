@@ -30,3 +30,10 @@ html {
   background: linear-gradient(180deg, #67B5FF 0%, #268BEB 100%);
 
 }
+
+.custom-select {
+  background-image: url("data:image/svg+xml;utf8,<svg>...</svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1rem;
+}

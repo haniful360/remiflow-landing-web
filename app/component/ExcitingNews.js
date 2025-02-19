@@ -1,5 +1,5 @@
 import React from "react";
-import phone1 from "@/public/images/phone.svg";
+import phone1 from "@/public/images/phone.png";
 import rocket from "@/public/images/rocket.svg";
 import Image from "next/image";
 
