@@ -10,7 +10,7 @@ import RightArrowIcon from "../svg/RightArrowIcon";
 
 const ExchangeBox = () => {
   const [amount, setAmount] = useState(1000);
-  const [paymentMethod, setPaymentMethod] = useState("Interac e-Transfer"); // State for payment method
+  const [paymentMethod, setPaymentMethod] = useState("");
   const exchangeRate = 60.04;
   const convertedAmount = (amount * exchangeRate).toFixed(2);
 
@@ -75,16 +75,16 @@ const ExchangeBox = () => {
       {/* for mobile */}
 
       <div className="md:hidden ">
-      <div className="flex items-center gap-3 py-5 ml-5">
-        <div className="bg-[#2277C8] w-[42px] h-[42px] rounded-full flex items-center justify-center">
-          <Image src={up_down} className="w-[20px] h-[20px]"alt="" />
+        <div className="flex items-center gap-3 py-5 ml-5">
+          <div className="bg-[#2277C8] w-[42px] h-[42px] rounded-full flex items-center justify-center">
+            <Image src={up_down} className="w-[20px] h-[20px]" alt="" />
+          </div>
+          <div className="flex gap-4 text-[#038D1E] font-poppins text-[16px] leading-[17.6px]">
+            <span>1.00 CAD </span>
+            <RightArrowIcon />
+            <span> 60.04 INR</span>
+          </div>
         </div>
-        <div className="flex gap-4 text-[#038D1E] font-poppins text-[16px] leading-[17.6px]">
-          <span>1.00 CAD </span>
-          <RightArrowIcon />
-          <span> 60.04 INR</span>
-        </div>
-      </div>
       </div>
 
       {/* Conversion Details Section */}
@@ -167,46 +167,45 @@ const ExchangeBox = () => {
       </div>
 
       {/* Exchange Rate */}
-      <p className="text-right text-sm sm:text-[16px] text-[#989898] mt-2 font-poppins font-medium border-b-[1.25px] pt-1 pb-2 border-[#ECEEF3]">
+      <p className="hidden md:block text-right text-sm sm:text-[16px] text-[#989898] mt-2 font-poppins font-medium border-b-[1.25px] pt-1 pb-2 border-[#ECEEF3]">
         1 CAD = {exchangeRate} INR
       </p>
 
+      <div className="md:hidden  px-6 flex mt-4 border-b pb-2 border-[#ECEEF3] justify-between text-[#989898] text-[14px] font-medium font-poppins">
+        <span className="leading-[21px]">Fees*</span>
+        <span className="leading-[21px]">0 CAD</span>
+      </div>
+
+      <p className="text-[#727272] mt-4 font-poppins text-[12px] md:text-[16px] font-medium">
+        Pay with:
+      </p>
       {/* Payment Options */}
-      <div className="flex flex-col font-poppins sm:flex-row md:items-center justify-between py-2 relative">
+      <div className="flex  font-poppins sm:flex-row items-center justify-between pb-4 pt-1 relative">
         {/* First Div */}
-        <div className="lg:w-[50%] rounded-lg font-poppins">
-          <label className="text-[#727272] text-[14px] sm:text-[16px] font-medium">
-            Pay with:
-          </label>
+        <div className="max-w-[50%] rounded-lg font-poppins">
           {/* This div will display as flex on mobile and be hidden on larger devices */}
-          <div className="flex lg:flex-col justify-between">
-            <div>
-              <select
-                className="rounded text-[14px] sm:text-[16px] text-green-600 font-medium focus:outline-none"
-                value={paymentMethod}
-                onChange={(e) => setPaymentMethod(e.target.value)}
-              >
-                <option className="text-[14px] sm:text-[16px]">
-                  Interance E-Transfer
-                </option>
-                <option className="text-[14px] sm:text-[16px]">
-                  Cash pickup (within GTA)
-                </option>
-              </select>
-            </div>
-            <p className="text-center text-[#1A5996] font-medium mt-1 text-[14px] sm:text-[16px]">
-              Free
-            </p>
-          </div>
+          <select
+            className="w-[150px] md:w-full truncate p-1 rounded text-[12px] md:text-[16px] text-green-600 font-medium focus:outline-none"
+            value={paymentMethod}
+            onChange={(e) => setPaymentMethod(e.target.value)}
+          >
+            <option>Interance E-Transfer</option>
+            <option>Cash pickup (within GTA)</option>
+          </select>
+
+          <p className="text-center text-[#1A5996] font-medium text-[12px] md:text-[16px]">
+            Free
+          </p>
         </div>
         {/* Responsive Border */}
-        <div className="w-full h-[0.75px] bg-[#E3E5EA] my-3 sm:hidden"></div>
-        <div className="hidden ml-[14px] sm:block absolute left-1/2 transform -translate-x-1/2 h-4/6 w-[.75px] bg-[#E3E5EA]"></div>
-        <div className="lg:w-[45%] lg:mt-3 text-left md:text-center sm:mt-0 text-[#727272] text-[14px] sm:text-[16px] font-medium">
-          <span>
-            Estimated delivery time: <br />
+        <div className="ml-2 sm:block absolute left-1/2 transform -translate-x-1/2 h-4/6 w-[.75px] bg-[#E3E5EA]"></div>
+        <div className="max-w-[45%] text-center text-[#727272] md:text-[16px] font-medium">
+          <span className="text-[12px] text-center md:text-[16px] ">
+            Estimated delivery time:
           </span>
-          <p className="text-[#1A5996] font-medium">1-3 Days</p>
+          <p className="text-[#1A5996] text-[12px] md:text-[16px] text-center mt-1 font-medium">
+            1-3 Days
+          </p>
         </div>
       </div>
 
