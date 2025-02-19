@@ -53,17 +53,17 @@ const Features = () => {
     >
       <div className="py-12">
         <div className="max-w-[1250px] mx-auto flex flex-col lg:flex-row items-center gap-12">
-          <div className=" w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 flex-1 order-last lg:order-none">
+          <div className="px-6 lg:px-0 w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 flex-1 order-last lg:order-none">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="relative bg-white p-4 rounded-[24px] shadow text-center flex flex-col items-center"
+                className="relative bg-white p-4 rounded-[22px] shadow text-center flex flex-col items-center"
                 data-aos="fade-up"
               >
                 <Image
                   className="absolute -top-8 "
                   src={feature?.icon}
-                  alt=""
+                  alt="feature"
                   width={64}
                   height={64}
                 />
@@ -76,7 +76,7 @@ const Features = () => {
               </div>
             ))}
           </div>
-          <div className="lg:w-[480px] text-center lg:text-left">
+          <div className="px-6 lg:px-0 lg:w-[480px] text-center lg:text-left">
             <h2
               className="text-[24px] font-noto lg:text-[38px] font-semibold leading-[55px] text-[#FA6D2BF7]"
               data-aos="fade-up"
@@ -85,19 +85,19 @@ const Features = () => {
             </h2>
             <div className="mt-5">
               <div className="lg:flex items-start">
-                <div className="ml-3 lg:ml-0 mr-2">
+                <div className="mr-2">
                   <Image
                     src={quote2}
                     alt="Opening quote"
                     width={45}
                     height={45}
                     className="w-[16px] h-[16px] lg:w-[45px] lg:h-[45px]"
-                    // data-aos="fade-up"
+                    data-aos="fade-up"
                   />
                 </div>
                 <p
                   className="hidden md:block max-w-[368px] mt-5 text-center font-poppins leading-[31px] lg:text-[24px] text-[#607D8B]"
-                  // data-aos="fade-up"
+                  data-aos="fade-up"
                 >
                   Built by immigrants, for <br /> immigrants – sending money{" "}
                   <br /> home isn’t just a transaction; <br /> it’s a
@@ -109,17 +109,17 @@ const Features = () => {
                 </p>
 
                 <p
-                  className="md:hidden max-w-[368px] -mt-2 text-[16px] leading-6 text-center font-poppins text-[#607D8B]"
+                  className="md:hidden max-w-[368px] -mt-1 text-[16px] leading-6 text-center font-poppins text-[#607D8B]"
                   data-aos="fade-up"
                 >
-                  <span className="pl-[4px]">Built</span> by immigrants, for immigrants – sending money home isn’t
+                  <span className="pl-[14px]">Built</span> by immigrants, for immigrants – sending money home isn’t
                   just a transaction; it’s a connection. We know every rupee
                   counts. That’s why we make sure you get the best value, so
                   your hard-earned money goes further for the people who matter
                   most.
                 </p>
               </div>
-              <div className="flex justify-end relative lg:right-4 -mt-2">
+              <div className="flex justify-end relative lg:right-4  -mt-2">
                 <Image
                   src={quote1}
                   alt="Closing quote"

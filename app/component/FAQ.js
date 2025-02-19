@@ -37,7 +37,7 @@ export default function FAQSection() {
   return (
     <div
       id="faq"
-      className="max-w-[1250px] lg:h-[611px] mx-auto px-6 py-10 flex flex-col items-center md:flex-row gap-10"
+      className="max-w-[1250px] lg:h-[611px]  mx-auto px-6 lg:px-0 py-10 flex flex-col items-center md:flex-row gap-10"
     >
       {/* Left Section (Title & Description) */}
       <div className="md:w-1/2 space-y-6 ">
@@ -82,14 +82,14 @@ export default function FAQSection() {
             >
               <div className="">
                 <div className="flex items-center gap-2 lg:gap-4">
-                  <div className="bg-blue-400 lg:w-[45px] lg:h-[45px] flex items-center justify-center transition-all duration-300 ease-in-out p-1 lg:p-0">
+                  <div className="bg-blue-400  lg:w-[45px] lg:h-[45px] flex items-center justify-center transition-all duration-300 ease-in-out p-1 lg:p-0">
                     {openIndex === index ? (
                       <MinusIcon className="text-[#2B95FA] transition-transform duration-300 ease-in-out rotate-180" />
                     ) : (
                       <PlusIcon className="text-[#2B95FA] transition-transform duration-300 ease-in-out" />
                     )}
                   </div>
-                  <span className="text-[#2B95FA] font-semibold text-[10px] lg:text-[16px] leading-5 font-poppins">
+                  <span className="text-[#2B95FA] font-semibold text-[12px] lg:text-[16px] leading-5 font-poppins">
                     {faq.question}
                   </span>
                 </div>

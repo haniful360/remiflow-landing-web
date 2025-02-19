@@ -32,7 +32,7 @@ const ExcitingNews = () => {
               RemiFlow App <span className="text-[#039D21]">Coming Soon!</span>
             </h2>
             <p
-              className="text-[#607D8B] text-[16px] sm:text-[22px] lg:text-[26px] font-poppins leading-[24px] lg:leading-[34px] mt-6"
+              className="px-2 text-[#607D8B] text-[16px] sm:text-[22px] lg:text-[26px] font-poppins leading-[24px] lg:leading-[34px] mt-6"
               data-aos="fade-up"
             >
               Get ready for the ultimate convenience! Our mobile app will make

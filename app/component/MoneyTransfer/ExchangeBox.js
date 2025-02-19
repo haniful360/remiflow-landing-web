@@ -171,13 +171,13 @@ const ExchangeBox = () => {
         1 CAD = {exchangeRate} INR
       </p>
 
-      <div className="md:hidden  px-6 flex mt-4 border-b pb-2 border-[#ECEEF3] justify-between text-[#989898] text-[14px] font-medium font-poppins">
+      <div className="md:hidden px-4 flex mt-4 border-b pb-2 border-[#ECEEF3] justify-between text-[#989898] text-[14px] font-medium font-poppins">
         <span className="leading-[21px]">Fees*</span>
         <span className="leading-[21px]">0 CAD</span>
       </div>
 
       {/* Payment Options */}
-      <div className="px-4 flex  sm:flex-row items-center justify-between pb-4 pt-4  font-poppins relative">
+      <div className="px-1 flex  sm:flex-row items-center justify-between py-4  font-poppins relative">
         {/* First Div */}
         <div className="max-w-[50%] rounded-lg font-poppins"> 
           <div className="flex items-center">
@@ -185,12 +185,12 @@ const ExchangeBox = () => {
               Pay with:
             </p>
             <select
-              className="w-[86px] md:w-3/6 truncate py-[2px] rounded text-[12px] md:text-[16px] text-green-600 font-medium focus:outline-none "
+              className="w-[86px] md:w-3/6 truncate py-[2px] rounded text-[12px] md:text-[16px] text-[#038D1E] font-medium focus:outline-none "
               value={paymentMethod}
               onChange={(e) => setPaymentMethod(e.target.value)}
             >
               <option>E-Transfer</option>
-              <option className="truncate">Cash pickup (within GTA)</option>
+              <option>Cash pickup (within GTA)</option>
             </select>
           </div>
 
