@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className="">
       <div className="bg-white border-b border-[#D9D9D9] md:hidden h-16" ></div>
-      <div className="max-w-[1250px] mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8
+      <div className="max-w-[1250px] mx-auto px-6 py-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8
 ">
         <div className="hidden md:block" data-aos="fade-up">
           <h2 className="text-xl font-bold flex items-center space-x-2">
@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="font-poppins" data-aos="fade-up">
-          <h3 className="text-[16px] font-poppins  text-[#404b50] font-semibold mb-2">Useful Links</h3>
+          <h3 className="text-[16px] font-poppins  text-[#404b50] lg:text-[#26769C] font-semibold mb-2">Useful Links</h3>
           <ul className="space-y-2 text-[#557280] md:text-[#1E1E1E] leading-6">
             <li>
               <Link href="/" className="hover:text-[#2B95FA] transition">
