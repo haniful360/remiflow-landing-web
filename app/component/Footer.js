@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import logo from "@/public/images/logo.svg";
+import logo1 from "@/public/images/mobile_ft.png";
 import x from "@/public/images/X Logo.svg";
 import youtube from "@/public/images/Logo YouTube.svg";
 import linkedIn from "@/public/images/LinkedIn.svg";
@@ -9,9 +10,11 @@ import instagram from "@/public/images/Logo Instagram.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#F9FAFB] text-gray-800 text-sm">
-      <div className="max-w-[1250px] mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
-        <div data-aos="fade-up">
+    <footer className="">
+      <div className="bg-white border-b border-[#D9D9D9] md:hidden h-16" ></div>
+      <div className="max-w-[1250px] mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8
+">
+        <div className="hidden md:block" data-aos="fade-up">
           <h2 className="text-xl font-bold flex items-center space-x-2">
             <Link href="/">
               <Image src={logo} alt="" width={198} height={53} />
@@ -33,8 +36,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="font-poppins" data-aos="fade-up">
-          <h3 className="text-[16px] text-[#26769C] font-semibold mb-2">Useful Links</h3>
-          <ul className="space-y-2 text-[#1E1E1E]">
+          <h3 className="text-[16px] font-poppins  text-[#404b50] font-semibold mb-2">Useful Links</h3>
+          <ul className="space-y-2 text-[#557280] md:text-[#1E1E1E] leading-6">
             <li>
               <Link href="/" className="hover:text-[#2B95FA] transition">
                 Home
@@ -75,7 +78,7 @@ const Footer = () => {
         </div>
         <div className="font-poppins" data-aos="fade-up">
           <h3 className="text-[16px] text-[#26769C] font-semibold mb-2">Explore</h3>
-          <ul className="space-y-2 text-[#1E1E1E]">
+          <ul className="space-y-2 text-[#557280] md:text-[#1E1E1E] leading-6">
             <li>
               <Link
                 href="#privacy-policy"
@@ -109,14 +112,33 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-[#F9FAFB] border-t">
-        <div className="max-w-[1250px] mx-auto flex items-center gap-10 py-4">
+      <div className="lg:bg-[#F9FAFB] border-t px-6 pb-5 md:pb-0">
+        <div className="max-w-[1250px] mx-auto py-4">
+          <div className="flex items-center gap-2 lg:gap-10 ">
           <Link href="/">
-            <Image src={logo} alt="" width={198} height={53} />
+            <Image src={logo} alt="" width={198} height={53}  className="hidden md:block"/>
+            <Image src={logo1} alt=""  className="md:hidden" />
           </Link>
-          <p className="text-[#134370] text-[16px] leading-[26px]">
+          <p className="text-[#134370] text-[14px] lg:text-[16px] font-poppins leading-[21px] lg:leading-[26px]">
             © 2025 Remiflow. All Rights Reserved.
           </p>
+          </div>
+        <div className="md:hidden">
+        <div className="flex justify-center space-x-4 mt-4 ">
+            <Link href="#" className="text-gray-600 hover:text-gray-900">
+              <Image src={x} alt="" width={24} height={24} />
+            </Link>
+            <Link href="#" className="text-gray-600 hover:text-gray-900">
+              <Image src={instagram} alt="" width={24} height={24} />
+            </Link>
+            <Link href="#" className="text-gray-600 hover:text-gray-900">
+              <Image src={youtube} alt="" width={24} height={24} />
+            </Link>
+            <Link href="#" className="text-gray-600 hover:text-gray-900">
+              <Image src={linkedIn} alt="" width={24} height={24} />
+            </Link>
+          </div>
+        </div>
         </div>
       </div>
     </footer>

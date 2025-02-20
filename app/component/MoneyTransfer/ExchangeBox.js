@@ -194,7 +194,7 @@ const ExchangeBox = () => {
             </select>
           </div>
 
-          <p className="text-center text-[#1A5996] font-medium text-[12px] md:text-[16px]">
+          <p className="text-center text-[#1A5996] mt-1 lg:mt-0 font-medium text-[12px] md:text-[16px]">
             Free
           </p>
         </div>
