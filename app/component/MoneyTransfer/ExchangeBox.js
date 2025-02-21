@@ -1,18 +1,21 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import CA from "@/public/images/money/CA.svg";
 import IN from "@/public/images/money/IN.svg";
-import downarrow from "@/public/images/money/down-arrow.svg";
 import left from "@/public/images/money/left.svg";
 import up_down from "@/public/images/updown.svg";
+import downarrow from "@/public/images/money/down-arrow.svg";
 import Image from "next/image";
 import RightArrowIcon from "../svg/RightArrowIcon";
-import { Select } from "@headlessui/react";
-import clsx from "clsx";
+
+const paymentOptions = ["E-Transfer", "Cash pickup (within GTA)"];
 
 const ExchangeBox = () => {
   const [amount, setAmount] = useState(1000);
-  const [paymentMethod, setPaymentMethod] = useState("");
+  const [paymentMethod, setPaymentMethod] = useState(paymentOptions[0]);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
   const exchangeRate = 60.04;
   const convertedAmount = (amount * exchangeRate).toFixed(2);
 
@@ -22,17 +25,32 @@ const ExchangeBox = () => {
     setAmount(value);
   };
 
+  const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
+
+  const handleSelect = (option) => {
+    setPaymentMethod(option);
+    setIsDropdownOpen(false);
+  };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   const lockInRate = () => {
     const whatsappURL = `https://wa.me/15483845252?text=Hi%20RemiFlow,%20I%20would%20like%20to%20send%20${amount}%20CAD%20to%20India%20at%20the%20rate%20of%20${exchangeRate}%20INR%20via%20${paymentMethod}.%20Kindly%20proceed%20with%20the%20transaction.`;
     window.location.href = whatsappURL;
   };
 
   return (
-    <div
-      className="bg-white p-4 rounded-lg shadow-lg border border-[#2B95FA] max-w-[480px] w-full mx-auto"
-      // data-aos="fade-up"
-    >
-      {/* You Send Section */}
+    <div className="bg-white p-4 rounded-lg shadow-lg border border-[#2B95FA] max-w-[480px] w-full mx-auto">
+      {/* send section */}
       <div className="bg-[#EDF7FE] flex items-center lg:h-[74px] rounded-lg">
         <div className="relative flex items-center justify-between p-4 rounded-lg h-[56px]">
           {/* Left Section */}
@@ -74,23 +92,8 @@ const ExchangeBox = () => {
         </div>
       </div>
 
-      {/* for mobile */}
-
-      <div className="md:hidden ">
-        <div className="flex items-center gap-3 py-5 ml-5">
-          <div className="bg-[#2277C8] w-[42px] h-[42px] rounded-full flex items-center justify-center">
-            <Image src={up_down} className="w-[20px] h-[20px]" alt="" />
-          </div>
-          <div className="flex gap-4 text-[#038D1E] font-poppins text-[16px] leading-[17.6px]">
-            <span>1.00 CAD </span>
-            <RightArrowIcon />
-            <span> 60.04 INR</span>
-          </div>
-        </div>
-      </div>
-
       {/* Conversion Details Section */}
-      <div className="hidden md:block ">
+      <div className="hidden md:block">
         <div className="flex flex-col sm:flex-row gap-2 py-4 text-gray-700">
           <Image
             className="sm:ml-5 mx-auto hidden md:block"
@@ -112,7 +115,7 @@ const ExchangeBox = () => {
                 <span>0 CAD</span>
               </p>
             </div>
-            <p className="flex justify-between font-semibold border-b-[1.25px] pt-[6px] pb-3 mt- border-[#ECEEF3]">
+            <p className="flex justify-between font-semibold border-b-[1.25px] pt-[6px] pb-3 border-[#ECEEF3]">
               <span>Amount to convert</span>
               <span>{amount} INR</span>
             </p>
@@ -124,7 +127,20 @@ const ExchangeBox = () => {
         </div>
       </div>
 
-      {/* They Get Section */}
+      <div className="md:hidden">
+        <div className="flex items-center gap-3 py-5 ml-5">
+          <div className="bg-[#2277C8] w-[42px] h-[42px] rounded-full flex items-center justify-center">
+            <Image src={up_down} className="w-[20px] h-[20px]" alt="" />
+          </div>
+          <div className="flex gap-4 text-[#038D1E] font-poppins text-[16px] leading-[17.6px]">
+            <span>1.00 CAD </span>
+            <RightArrowIcon />
+            <span> 60.04 INR</span>
+          </div>
+        </div>
+      </div>
+
+      {/* the get section */}
       <div className="bg-[#EDF7FE] flex items-center lg:h-[74px] rounded-lg">
         <div className="relative flex items-center justify-between p-4 rounded-lg h-[56px] w-full">
           {/* Left Section */}
@@ -173,63 +189,87 @@ const ExchangeBox = () => {
         1 CAD = {exchangeRate} INR
       </p>
 
+      {/* for mobile */}
       <div className="md:hidden px-4 flex mt-4 border-b pb-2 border-[#ECEEF3] justify-between text-[#989898] text-[14px] font-medium font-poppins">
         <span className="leading-[21px]">Fees*</span>
         <span className="leading-[21px]">0 CAD</span>
       </div>
 
       {/* Payment Options */}
-      <div className="px-1 flex  sm:flex-row items-center justify-between py-4  font-poppins relative">
-        {/* First Div */}
-        <div className="max-w-[50%] rounded-lg font-poppins">
-          <div className="flex items-center">
-            <p className="text-[#727272]  font-poppins text-[12px] md:text-[16px] font-medium">
+      <div className="lg:px-2 flex sm:flex-row items-center justify-between py-6 font-poppins relative">
+        {/* Custom Dropdown */}
+        <div
+          className="max-w-[50%] rounded-lg font-poppins relative"
+          ref={dropdownRef}
+        >
+          <div className="flex">
+            <p className="text-[#727272] text-[12px] md:text-[16px] font-medium">
               Pay with:
             </p>
-            {/* <select
-              className="w-[86px] md:w-3/6 truncate py-[2px] rounded text-[12px] md:text-[16px] text-[#038D1E] font-medium focus:outline-none "
-              value={paymentMethod}
-              onChange={(e) => setPaymentMethod(e.target.value)}
+            <div
+              className="w-[90px] md:w-[130px] bg-white rounded-lg px-1 lg:px-2 cursor-pointer flex justify-between items-center"
+              onClick={toggleDropdown}
             >
-              <option>E-Transfer</option>
-              <option>Cash pickup (within GTA)</option>
-            </select> */}
-
-            <Select
-                className={clsx(
-                  "w-[86px] md:w-3/6 truncate py-[2px] rounded text-[12px] md:text-[16px] text-[#038D1E] font-medium focus:outline-none",
-                  // Make the text of each option black on Windows
-                  "*:text-black"
-                )}
+              <span className="w-[90px] text-[#038D1E] truncate text-[12px] md:text-[16px] font-medium">
+                {paymentMethod}
+              </span>
+              <span
+                className={`transition-transform ${
+                  isDropdownOpen ? "rotate-180" : ""
+                }`}
               >
-                <option>E-Transfer</option>
-                <option>Cash pickup (within GTA)</option>
-              </Select>
+                <Image
+                  src={downarrow}
+                  alt="Down Arrow"
+                  width={16} // Increased size
+                  height={16} // Increased size
+                  className="w-3 h-3 md:w-4 md:h-4 transition-transform duration-200 ease-in-out"
+                />
+              </span>
+            </div>
           </div>
+
+          {/* Dropdown Menu */}
+          {isDropdownOpen && (
+            <ul className="absolute left-0 mt-1 bg-white border border-gray-300 rounded-lg shadow-lg z-10">
+              {paymentOptions.map((option, index) => (
+                <li
+                  key={index}
+                  className="px-2 py-2 cursor-pointer hover:bg-gray-200 text-[12px] md:text-[16px]"
+                  onClick={() => handleSelect(option)}
+                >
+                  {option}
+                </li>
+              ))}
+            </ul>
+          )}
 
           <p className="text-center text-[#1A5996] mt-1 lg:mt-0 font-medium text-[12px] md:text-[16px]">
             Free
           </p>
         </div>
+
         {/* Responsive Border */}
         <div className="sm:block absolute left-1/2 transform -translate-x-1/2 h-4/6 w-[.75px] bg-[#E3E5EA]"></div>
-        <div className="max-w-[45%] text-center text-[#727272] md:text-[16px] font-medium">
-          <span className="text-[12px] text-center md:text-[16px] ">
-            Estimated delivery time:
+
+        <div className=" text-center text-[#727272] text-[12px] md:text-[16px] font-medium">
+          <span className="text-[12px] md:text-[16px]">
+            Estimated delivery time
           </span>
           <p className="text-[#1A5996] text-[12px] md:text-[16px] text-center mt-1 font-medium">
             1-3 Days
           </p>
         </div>
       </div>
-
       {/* Lock in Rate Button */}
-      <button
+     <div className="pb-5">
+     <button
         onClick={lockInRate}
-        className="send_money_btn w-full mt-4 h-12 sm:h-[74px] text-lg sm:text-[24px] font-poppins text-white rounded-lg hover:bg-blue-700 transition"
+        className="send_money_btn w-full  h-12 sm:h-[74px] text-[18px] font-medium sm:text-[24px] font-poppins text-white rounded-lg hover:bg-blue-700 transition"
       >
         Lock in Rate & Continue
       </button>
+     </div>
     </div>
   );
 };

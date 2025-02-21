@@ -2,6 +2,7 @@ import React from "react";
 import phone1 from "@/public/images/phone.png";
 import rocket from "@/public/images/rocket.svg";
 import Image from "next/image";
+import MobileIconSmall from "./svg/MobileIconSmall";
 
 const ExcitingNews = () => {
   return (
@@ -44,11 +45,12 @@ const ExcitingNews = () => {
             className="md:w-1/2 flex justify-center mt-6 md:mt-0"
             data-aos="fade-up"
           >
-            <Image
+            {/* <Image
               src={phone1}
               alt="Mobile App Preview"
               className="max-w-xs md:max-w-sm rounded-lg"
-            />
+            /> */}
+            {/* <MobileIconSmall/> */}
           </div>
         </div>
       </div>
