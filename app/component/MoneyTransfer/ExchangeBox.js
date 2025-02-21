@@ -7,6 +7,8 @@ import left from "@/public/images/money/left.svg";
 import up_down from "@/public/images/updown.svg";
 import Image from "next/image";
 import RightArrowIcon from "../svg/RightArrowIcon";
+import { Select } from "@headlessui/react";
+import clsx from "clsx";
 
 const ExchangeBox = () => {
   const [amount, setAmount] = useState(1000);
@@ -179,19 +181,30 @@ const ExchangeBox = () => {
       {/* Payment Options */}
       <div className="px-1 flex  sm:flex-row items-center justify-between py-4  font-poppins relative">
         {/* First Div */}
-        <div className="max-w-[50%] rounded-lg font-poppins"> 
+        <div className="max-w-[50%] rounded-lg font-poppins">
           <div className="flex items-center">
             <p className="text-[#727272]  font-poppins text-[12px] md:text-[16px] font-medium">
               Pay with:
             </p>
-            <select
+            {/* <select
               className="w-[86px] md:w-3/6 truncate py-[2px] rounded text-[12px] md:text-[16px] text-[#038D1E] font-medium focus:outline-none "
               value={paymentMethod}
               onChange={(e) => setPaymentMethod(e.target.value)}
             >
               <option>E-Transfer</option>
               <option>Cash pickup (within GTA)</option>
-            </select>
+            </select> */}
+
+            <Select
+                className={clsx(
+                  "w-[86px] md:w-3/6 truncate py-[2px] rounded text-[12px] md:text-[16px] text-[#038D1E] font-medium focus:outline-none",
+                  // Make the text of each option black on Windows
+                  "*:text-black"
+                )}
+              >
+                <option>E-Transfer</option>
+                <option>Cash pickup (within GTA)</option>
+              </Select>
           </div>
 
           <p className="text-center text-[#1A5996] mt-1 lg:mt-0 font-medium text-[12px] md:text-[16px]">
