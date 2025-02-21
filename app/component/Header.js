@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import logo from "@/public/images/logo.svg";
-import mobileLogo from "@/public/images/mobile_logo.png";
+import logo from "@/public/images/logo/logo.svg";
+import mobileLogo from "@/public/images/logo/mobile-logo.svg";
 import call from "@/public/images/call.svg";
 import menu from "@/public/images/menu.svg";
 import Link from "next/link";
@@ -13,22 +13,28 @@ const Header = () => {
 
   return (
     <>
-      <header className="w-full  h-[46px] lg:h-[80px]  md:h-[100px] flex justify-center shadow-md bg-white">
+      <header className="w-full h-[46px] md:h-[100px] flex justify-center shadow-md bg-white">
         <div className="max-w-[1250px] w-full flex justify-between items-center px-4 md:px-6">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
               src={logo}
               alt="Logo"
-              width={180}
-              height={50}
-              className="md:w-[180px] hidden md:block"
+              width={198}
+              height={53}
+              quality={100}
+              priority
+              className="md:block hidden"
             />
+
             <Image
               src={mobileLogo}
-              alt="Logo"
-              
-              className="md:hidden block"
+              alt="Mobile Logo"
+              width={93}
+              height={40}
+              quality={100}
+              priority
+              className="md:hidden"
             />
           </Link>
 
@@ -68,7 +74,13 @@ const Header = () => {
           </nav>
           <div className="md:hidden flex gap-3 ">
             <Link href="#">
-              <Image className="md:hidden" src={call} width={24} height={24} alt="" />
+              <Image
+                className="md:hidden"
+                src={call}
+                width={24}
+                height={24}
+                alt=""
+              />
             </Link>
             {/* Mobile Menu Button */}
             <button

@@ -221,9 +221,9 @@ const ExchangeBox = () => {
                 <Image
                   src={downarrow}
                   alt="Down Arrow"
-                  width={16} // Increased size
-                  height={16} // Increased size
-                  className="w-3 h-3 md:w-4 md:h-4 transition-transform duration-200 ease-in-out"
+                  width={14} // Increased size
+                  height={14} // Increased size
+                  className="w-3 h-3 lg:w-[14px] md:h-[14px] transition-transform duration-200 ease-in-out"
                 />
               </span>
             </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import phone1 from "@/public/images/phone.png";
+import phone1 from "@/public/images/exciting/phone.png";
 import rocket from "@/public/images/rocket.svg";
 import Image from "next/image";
 
@@ -7,7 +7,7 @@ const ExcitingNews = () => {
   return (
     <div className="bg-[url(/images/exciting/ex_mobile.png)] md:bg-[url(/images/exciting_bg.svg)] bg-cover bg-center bg-no-repeat">
       <div className="max-w-[1250px] mx-auto">
-        <div className="mt-16 w-full p-6 lg:p-0 h-auto lg:h-[800px] rounded-lg flex flex-col md:flex-row items-center">
+        <div className="mt-16 w-full px-6 pt-10 pb-6 lg:p-0 h-auto lg:h-[800px] rounded-lg flex flex-col md:flex-row items-center">
           <div className="md:w-1/2">
             <div className="hidden">
               <h3
@@ -54,9 +54,18 @@ const ExcitingNews = () => {
             <Image
               src={phone1}
               alt="Mobile App Preview"
-              width={400}
-              height={800}
-              className="rounded-lg"
+              width={300}
+              height={660}
+              className="rounded-lg md:hidden"
+              quality={100}
+              priority
+            />
+            <Image
+              src={phone1}
+              alt="Mobile App Preview"
+              className="rounded-lg hidden md:block"
+              width={320}
+              height={660}
               quality={100}
               priority
             />
