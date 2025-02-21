@@ -3,7 +3,7 @@ import React from "react";
 const MobileIconSmall = () => {
   return (
     <div>
-      {/* var view = UIView() view.frame = CGRect(x: 0, y: 0, width: 254.6, height:
+      var view = UIView() view.frame = CGRect(x: 0, y: 0, width: 254.6, height:
       525) let image0 = UIImage(named: "4.png")?.cgImage let layer0 = CALayer()
       layer0.contents = image0 layer0.transform =
       CATransform3DMakeAffineTransform(CGAffineTransform(a: 4.46, b: 0, c: 0, d:
@@ -14,7 +14,7 @@ const MobileIconSmall = () => {
       view.heightAnchor.constraint(equalToConstant: 525).isActive = true
       view.centerXAnchor.constraint(equalTo: parent.centerXAnchor, constant:
       -0.2).isActive = true view.topAnchor.constraint(equalTo: parent.topAnchor,
-      constant: 304).isActive = true */}
+      constant: 304).isActive = true
     </div>
   );
 };

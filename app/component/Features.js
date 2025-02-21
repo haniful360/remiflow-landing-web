@@ -49,7 +49,7 @@ const Features = () => {
   return (
     <div
       id="choose"
-      className="lg:h-[800px] font-poppins flex items-center justify-center bg-[url(/images/about_us.png)] bg-center bg-no-repeat bg-cover"
+      className="lg:h-[800px] font-poppins flex items-center justify-center bg-[url(/images/features/bg_mobile.png)] md:bg-[url(/images/features/about_us.png)] bg-center bg-no-repeat bg-cover"
     >
       <div className="py-12">
         <div className="max-w-[1250px] mx-auto flex flex-col lg:flex-row items-center gap-12">
