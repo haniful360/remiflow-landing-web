@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import logo from "@/public/images/logo/logo.svg";
-import mobileLogo from "@/public/images/logo/mobile-logo.svg";
+import mobileLogo from "@/public/images/logo/new-logo.svg";
 import call from "@/public/images/call.svg";
 import menu from "@/public/images/menu.svg";
 import Link from "next/link";

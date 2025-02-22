@@ -1,5 +1,5 @@
 import React from "react";
-import herogroup from "@/public/images/herogroup.svg";
+import herogroup from "@/public/images/new-hero.svg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,7 +18,7 @@ const HeroSection = () => {
             <br className="hidden md:block" /> &{" "}
             <span className="lg:text-[#268BEB]"> Zero Fees</span>
           </h2>
-          <p className="w-full max-w-[364px] text-center md:text-left font-poppins font-normal text-[#FDFDFD] text-[16px] md:text-[#395664] sm:text-lg lg:text-[24px] my-6 md:mt-4 sm:max-w-[700px] lg:max-w-[800px]">
+          <p className="w-full max-w-[364px] text-center md:text-left font-poppins font-normal text-[#FDFDFD] text-[16px] md:text-[#395664] sm:text-lg lg:text-[24px] my-6 md:mt-4 sm:max-w-[700px] lg:max-w-[800px]" data-aos="fade-left">
             Get better rates than banks, Google, and Remitly. No fees, No
             hassle.
           </p>

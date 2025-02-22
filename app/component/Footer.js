@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import logo from "@/public/images/logo/logo.svg";
-import mobileLogo from "@/public/images/logo/mobile-logo.svg";
+import mobileLogo from "@/public/images/logo/new-logo.svg";
 import x from "@/public/images/X Logo.svg";
 import youtube from "@/public/images/Logo YouTube.svg";
 import linkedIn from "@/public/images/LinkedIn.svg";
@@ -150,7 +150,7 @@ const Footer = () => {
                 className="md:hidden"
               />
             </Link>
-            <p className="text-[#134370] text-[14px] lg:text-[16px] font-poppins leading-[21px] lg:leading-[26px]">
+            <p className="text-[#134370] text-[13px] lg:text-[16px] font-poppins leading-[21px] lg:leading-[26px]">
               © 2025 Remiflow. All Rights Reserved.
             </p>
           </div>

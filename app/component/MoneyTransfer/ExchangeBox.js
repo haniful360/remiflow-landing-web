@@ -57,7 +57,7 @@ const ExchangeBox = () => {
   };
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow-lg border border-[#2B95FA] max-w-[480px] w-full mx-auto">
+    <div className="bg-white p-4 rounded-lg shadow-lg border border-[#2B95FA] max-w-[480px] w-full mx-auto" data-aos="fade-up">
       {/* send section */}
       <div className="bg-[#EDF7FE] flex items-center lg:h-[74px] rounded-lg">
         <div className="relative flex items-center justify-between p-4 rounded-lg h-[56px]">
