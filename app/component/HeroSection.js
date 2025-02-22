@@ -1,17 +1,17 @@
 import React from "react";
-import herogroup from "@/public/images/hero-group.png";
+import herogroup from "@/public/images/herogroup.svg";
 import Image from "next/image";
 import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section id="herosection" className="bg-gradient overflow-hidden">
+    <section id="herosection" className="bg-gradient">
       <div className="lg:mt-[80px] max-w-[1250px] mx-auto w-full lg:flex items-center justify-between gap-4">
         {/* Text Content */}
         <div className="flex-1 flex flex-col justify-center bg-[#0056A8] md:bg-transparent text-center md:text-left h-[316px] p-4">
           <h2
             className="lg:w-[662px] text-[#FDFDFD] md:text-black font-noto text-[28px] leading-[36.4px] md:text-4xl lg:text-[55px] lg:leading-[75px] font-semibold md:font-bold"
-            // data-aos="fade-left"
+            data-aos="fade-left"
           >
             Send Money to India with The{" "}
             <span className="md:text-[#FA6D2B]"> Best Rates </span>
@@ -37,7 +37,7 @@ const HeroSection = () => {
             data-aos="fade-left"
           >
             <Link href="#moneytransfer">
-              <button className="max-w-[364px] mx-auto block text-[16px] font-poppins sm:text-lg lg:text-[26px] w-full sm:w-[200px] lg:w-[250px] h-[54px] sm:h-[60px] lg:h-[68px] rounded-full lg:rounded-[34px] bg-[#039D21] md:bg-[#268BEB] font-semibold text-white px-6 py-3 hover:bg-[#1a6bbf] transition-colors">
+              <button className="max-w-[364px] min-w-[180px] mx-auto block text-[16px] sm:text-lg lg:text-[26px] w-full sm:w-[200px] lg:w-[250px] h-[54px] sm:h-[60px] lg:h-[68px] rounded-full lg:rounded-[34px] bg-[#039D21] md:bg-[#268BEB] font-semibold lg:font-medium text-white px-6 py-3 hover:bg-[#1a6bbf] transition-colors">
                 Send Money
               </button>
             </Link>
@@ -46,10 +46,14 @@ const HeroSection = () => {
 
         {/* Image Section */}
         <div className="flex-1 mt-1 lg:mt-0" data-aos="fade-right">
-          <Image
+        <Image
             src={herogroup}
             alt="Happy family"
-            className="rounded-lg w-full p-5 lg:p-0 h-auto"
+            width={488}
+            height={460}
+            quality={100}
+            priority
+            className="rounded-lg p-5 lg:p-0 "
           />
         </div>
       </div>
