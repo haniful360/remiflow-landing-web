@@ -1,5 +1,5 @@
 import React from "react";
-import herogroup from "@/public/images/new-hero.svg";
+import herogroup from "@/public/images/herogroup.svg";
 import Image from "next/image";
 import Link from "next/link";
 
