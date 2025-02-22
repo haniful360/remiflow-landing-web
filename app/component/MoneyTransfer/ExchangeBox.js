@@ -11,18 +11,26 @@ import RightArrowIcon from "../svg/RightArrowIcon";
 const paymentOptions = ["E-Transfer", "Cash pickup (within GTA)"];
 
 const ExchangeBox = () => {
-  const [amount, setAmount] = useState(1000);
+  const [inr, setInr] = useState(1000);
+  const [cad, setCad] = useState(60040.00);
   const [paymentMethod, setPaymentMethod] = useState(paymentOptions[0]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
   const exchangeRate = 60.04;
-  const convertedAmount = (amount * exchangeRate).toFixed(2);
+  // const convertedAmount = (amount * exchangeRate).toFixed(2);
 
-  const handleAmountChange = (e) => {
-    let value = Number(e.target.value);
-    if (value <= 0) value = "";
-    setAmount(value);
+  const handleInrChange = (e) => {
+    const value = e.target.value;
+    setInr(value);
+    setCad(value ? (parseFloat(value) * exchangeRate).toFixed(2) : "");
+  };
+
+  // Convert CAD to INR
+  const handleCadChange = (e) => {
+    const value = e.target.value;
+    setCad(value);
+    setInr(value ? (parseFloat(value) / exchangeRate).toFixed(2) : "");
   };
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
@@ -44,7 +52,7 @@ const ExchangeBox = () => {
   }, []);
 
   const lockInRate = () => {
-    const whatsappURL = `https://wa.me/15483845252?text=Hi%20RemiFlow,%20I%20would%20like%20to%20send%20${amount}%20CAD%20to%20India%20at%20the%20rate%20of%20${exchangeRate}%20INR%20via%20${paymentMethod}.%20Kindly%20proceed%20with%20the%20transaction.`;
+    const whatsappURL = `https://wa.me/15483845252?text=Hi%20RemiFlow,%20I%20would%20like%20to%20send%20${cad}%20CAD%20to%20India%20at%20the%20rate%20of%20${exchangeRate}%20INR%20via%20${paymentMethod}.%20Kindly%20proceed%20with%20the%20transaction.`;
     window.location.href = whatsappURL;
   };
 
@@ -61,8 +69,8 @@ const ExchangeBox = () => {
             <input
               type="number"
               className="bg-[#EDF7FE] text-[#333333] text-[20px] lg:text-[24px] font-medium leading-[30px] focus:outline-none w-full"
-              value={amount}
-              onChange={handleAmountChange}
+              value={inr}
+              onChange={handleInrChange}
               required
             />
           </div>
@@ -117,11 +125,11 @@ const ExchangeBox = () => {
             </div>
             <p className="flex justify-between font-semibold border-b-[1.25px] pt-[6px] pb-3 border-[#ECEEF3]">
               <span>Amount to convert</span>
-              <span>{amount} INR</span>
+              <span>{inr} INR</span>
             </p>
             <p className="flex justify-between font-semibold pt-3">
               <span>Exchange rate</span>
-              <span>{convertedAmount} INR</span>
+              <span>{cad} INR</span>
             </p>
           </div>
         </div>
@@ -151,8 +159,8 @@ const ExchangeBox = () => {
             <input
               type="text"
               className="bg-[#EDF7FE] text-[#333333] text-[20px] lg:text-[24px] font-medium leading-[30px] focus:outline-none w-full"
-              value={convertedAmount}
-              readOnly
+              value={cad}
+              onChange={handleCadChange}
             />
           </div>
 
@@ -262,14 +270,14 @@ const ExchangeBox = () => {
         </div>
       </div>
       {/* Lock in Rate Button */}
-     <div className="pb-5">
-     <button
-        onClick={lockInRate}
-        className="send_money_btn w-full  h-12 sm:h-[74px] text-[18px] font-medium sm:text-[24px] font-poppins text-white rounded-lg hover:bg-blue-700 transition"
-      >
-        Lock in Rate & Continue
-      </button>
-     </div>
+      <div className="pb-5">
+        <button
+          onClick={lockInRate}
+          className="send_money_btn w-full  h-12 sm:h-[74px] text-[18px] font-medium sm:text-[24px] font-poppins text-white rounded-lg hover:bg-blue-700 transition"
+        >
+          Lock in Rate & Continue
+        </button>
+      </div>
     </div>
   );
 };
