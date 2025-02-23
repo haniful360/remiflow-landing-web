@@ -125,7 +125,7 @@ const Header = () => {
           Home
         </Link>
         <Link
-          href="#About"
+          href="#choose"
           className="text-gray-700 py-2 text-lg w-full"
           onClick={() => setIsOpen(false)}
         >

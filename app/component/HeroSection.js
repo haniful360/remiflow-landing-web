@@ -1,5 +1,5 @@
 import React from "react";
-import herogroup from "@/public/images/update_hero.svg";
+import herogroup from "@/public/images/new_hero.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -46,16 +46,26 @@ const HeroSection = () => {
 
         {/* Image Section */}
         <div className="flex-1 mt-1 lg:mt-0" data-aos="fade-right">
-        <Image
+        {/* <Image
             src={herogroup}
             alt="Happy family"
             width={488}
             height={460}
             quality={100}
             priority
-            className="rounded-lg p-5 lg:p-0 "
+            className="rounded-lg p-5 lg:p-0 hidden "
           />
+         */}
         </div>
+        <img
+            src="/images/new_hero.png"
+            alt="Happy family"
+            width={364}
+            height={344}
+            quality={100}
+            priority
+            className="block mx-auto mt-5 p-1"
+          />
       </div>
     </section>
   );
