@@ -1,5 +1,5 @@
 import React from "react";
-import herogroup from "@/public/images/new_hero.png";
+import herogroup from "@/public/images/Group 1707478082 (1).webp";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,7 +18,10 @@ const HeroSection = () => {
             <br className="hidden md:block" /> &{" "}
             <span className="lg:text-[#268BEB]"> Zero Fees</span>
           </h2>
-          <p className="w-full max-w-[364px] text-center md:text-left font-poppins font-normal text-[#FDFDFD] text-[16px] md:text-[#395664] sm:text-lg lg:text-[24px] my-6 md:mt-4 sm:max-w-[700px] lg:max-w-[800px]" data-aos="fade-left">
+          <p
+            className="w-full max-w-[364px] text-center md:text-left font-poppins font-normal text-[#FDFDFD] text-[16px] md:text-[#395664] sm:text-lg lg:text-[24px] my-6 md:mt-4 sm:max-w-[700px] lg:max-w-[800px]"
+            data-aos="fade-left"
+          >
             Get better rates than banks, Google, and Remitly. No fees, No
             hassle.
           </p>
@@ -46,26 +49,16 @@ const HeroSection = () => {
 
         {/* Image Section */}
         <div className="flex-1 mt-1 lg:mt-0" data-aos="fade-right">
-        {/* <Image
+          <Image
             src={herogroup}
             alt="Happy family"
-            width={488}
-            height={460}
-            quality={100}
+            width={2400}
+            height={2400}
             priority
-            className="rounded-lg p-5 lg:p-0 hidden "
+            placeholder="blur"
+            className="rounded-lg p-5 lg:p-0 w-full lg:w-[488px] lg:h-[460px] object-cover object-center"
           />
-         */}
         </div>
-        <img
-            src="/images/new_hero.png"
-            alt="Happy family"
-            width={364}
-            height={344}
-            quality={100}
-            priority
-            className="block mx-auto mt-5 p-1"
-          />
       </div>
     </section>
   );
