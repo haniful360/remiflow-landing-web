@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <>
       <header className="w-full h-[46px] md:h-[100px] flex justify-center shadow-md bg-white">
-        <div className="max-w-[1250px] w-full flex justify-between items-center px-4 md:px-6">
+        <div className="max-w-[1250px] w-full flex justify-between items-center pl-1 pr-4 md:px-6">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
@@ -30,8 +30,8 @@ const Header = () => {
             <Image
               src={mobileLogo}
               alt="Mobile Logo"
-              width={93}
-              height={40}
+              width={113}
+              height={50}
               quality={100}
               priority
               className="md:hidden"

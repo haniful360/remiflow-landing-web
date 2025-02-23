@@ -18,19 +18,22 @@ const ExchangeBox = () => {
   const dropdownRef = useRef(null);
 
   const exchangeRate = 60.04;
-  // const convertedAmount = (amount * exchangeRate).toFixed(2);
 
   const handleInrChange = (e) => {
     const value = e.target.value;
-    setInr(value);
-    setCad(value ? (parseFloat(value) * exchangeRate).toFixed(2) : "");
+    if (value === "" || parseFloat(value) >= 0) {
+      setInr(value);
+      setCad(value ? (parseFloat(value) * exchangeRate).toFixed(2) : "");
+    }
   };
 
   // Convert CAD to INR
   const handleCadChange = (e) => {
     const value = e.target.value;
-    setCad(value);
-    setInr(value ? (parseFloat(value) / exchangeRate).toFixed(2) : "");
+    if (value === "" || parseFloat(value) >= 0) {
+      setCad(value);
+      setInr(value ? (parseFloat(value) / exchangeRate).toFixed(2) : "");
+    }
   };
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
@@ -157,7 +160,7 @@ const ExchangeBox = () => {
               They get
             </label>
             <input
-              type="text"
+              type="number"
               className="bg-[#EDF7FE] text-[#333333] text-[20px] lg:text-[24px] font-medium leading-[30px] focus:outline-none w-full"
               value={cad}
               onChange={handleCadChange}
