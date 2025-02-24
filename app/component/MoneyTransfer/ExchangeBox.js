@@ -53,7 +53,7 @@ const ExchangeBox = () => {
   }, []);
 
   useEffect(() => {
-    document.addEventListener("touchstart", () => {}, { passive: true });
+    document.addEventListener("touchstart", () => {}, { passive: false });
   }, []);
 
   const lockInRate = () => {
@@ -77,7 +77,8 @@ const ExchangeBox = () => {
             <input
               type="text"
               pattern="[0-9]*"
-              inputMode="numeric"
+              inputMode="decimal"
+              autocomplete="off"
               className="bg-[#EDF7FE] text-[#333333] text-[20px] lg:text-[24px] font-medium leading-[30px] focus:outline-none w-full"
               value={inr}
               onChange={handleInrChange}
@@ -169,7 +170,8 @@ const ExchangeBox = () => {
             <input
               type="text"
               pattern="[0-9]*"
-              inputMode="numeric"
+              inputMode="decimal"
+              autocomplete="off"
               className="bg-[#EDF7FE] text-[#333333] text-[20px] lg:text-[24px] font-medium leading-[30px] focus:outline-none w-full"
               value={cad}
               onChange={handleCadChange}
