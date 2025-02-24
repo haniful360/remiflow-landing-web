@@ -12,28 +12,26 @@ const paymentOptions = ["E-Transfer", "Cash pickup (within GTA)"];
 
 const ExchangeBox = () => {
   const [inr, setInr] = useState(1000);
-  const [cad, setCad] = useState(60040.00);
+  const [cad, setCad] = useState(60040.0);
   const [paymentMethod, setPaymentMethod] = useState(paymentOptions[0]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
   const exchangeRate = 60.04;
 
+  
+
   const handleInrChange = (e) => {
-    const value = e.target.value;
-    if (value === "" || parseFloat(value) >= 0) {
-      setInr(value);
-      setCad(value ? (parseFloat(value) * exchangeRate).toFixed(2) : "");
-    }
+    const value = e.target.value.replace(/[^0-9.]/g, ""); // Remove non-numeric input
+    setInr(value);
+    setCad(value ? (parseFloat(value) * exchangeRate).toFixed(2) : "");
   };
 
   // Convert CAD to INR
   const handleCadChange = (e) => {
-    const value = e.target.value;
-    if (value === "" || parseFloat(value) >= 0) {
-      setCad(value);
-      setInr(value ? (parseFloat(value) / exchangeRate).toFixed(2) : "");
-    }
+    const value = e.target.value.replace(/[^0-9.]/g, "");
+    setCad(value);
+    setInr(value ? (parseFloat(value) / exchangeRate).toFixed(2) : "");
   };
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
@@ -54,13 +52,20 @@ const ExchangeBox = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  useEffect(() => {
+    document.addEventListener("touchstart", () => {}, { passive: true });
+  }, []);
+
   const lockInRate = () => {
     const whatsappURL = `https://wa.me/15483845252?text=Hi%20RemiFlow,%20I%20would%20like%20to%20send%20${cad}%20CAD%20to%20India%20at%20the%20rate%20of%20${exchangeRate}%20INR%20via%20${paymentMethod}.%20Kindly%20proceed%20with%20the%20transaction.`;
     window.location.href = whatsappURL;
   };
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow-lg border border-[#2B95FA] max-w-[480px] w-full mx-auto" data-aos="fade-up">
+    <div
+      className="bg-white p-4 rounded-lg shadow-lg border border-[#2B95FA] max-w-[480px] w-full mx-auto"
+      data-aos="fade-up"
+    >
       {/* send section */}
       <div className="bg-[#EDF7FE] flex items-center lg:h-[74px] rounded-lg">
         <div className="relative flex items-center justify-between p-4 rounded-lg h-[56px]">
@@ -70,7 +75,9 @@ const ExchangeBox = () => {
               You send
             </label>
             <input
-              type="number"
+              type="text"
+              pattern="[0-9]*"
+              inputMode="numeric"
               className="bg-[#EDF7FE] text-[#333333] text-[20px] lg:text-[24px] font-medium leading-[30px] focus:outline-none w-full"
               value={inr}
               onChange={handleInrChange}
@@ -160,10 +167,13 @@ const ExchangeBox = () => {
               They get
             </label>
             <input
-              type="number"
+              type="text"
+              pattern="[0-9]*"
+              inputMode="numeric"
               className="bg-[#EDF7FE] text-[#333333] text-[20px] lg:text-[24px] font-medium leading-[30px] focus:outline-none w-full"
               value={cad}
               onChange={handleCadChange}
+              required
             />
           </div>
 

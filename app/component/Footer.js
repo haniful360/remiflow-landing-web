@@ -126,7 +126,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="lg:bg-[#F9FAFB] border-t px-6 pb-5 md:pb-0">
+      <div className="lg:bg-[#F9FAFB] border-t pb-5 md:pb-0">
         <div className="max-w-[1250px] mx-auto py-4">
           <div className="flex items-center gap-2 lg:gap-10 ">
             <Link href="/">
@@ -143,8 +143,8 @@ const Footer = () => {
               <Image
                 src={mobileLogo}
                 alt="Mobile Logo"
-                width={93}
-                height={40}
+                width={198}
+                height={46}
                 quality={100}
                 priority
                 className="md:hidden"
