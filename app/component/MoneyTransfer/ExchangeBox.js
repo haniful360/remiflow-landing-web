@@ -19,8 +19,6 @@ const ExchangeBox = () => {
 
   const exchangeRate = 60.04;
 
-  
-
   const handleInrChange = (e) => {
     const value = e.target.value.replace(/[^0-9.]/g, ""); // Remove non-numeric input
     setInr(value);
@@ -52,10 +50,6 @@ const ExchangeBox = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  useEffect(() => {
-    document.addEventListener("touchstart", () => {}, { passive: false });
-  }, []);
-
   const lockInRate = () => {
     const whatsappURL = `https://wa.me/15483845252?text=Hi%20RemiFlow,%20I%20would%20like%20to%20send%20${cad}%20CAD%20to%20India%20at%20the%20rate%20of%20${exchangeRate}%20INR%20via%20${paymentMethod}.%20Kindly%20proceed%20with%20the%20transaction.`;
     window.location.href = whatsappURL;
@@ -76,9 +70,10 @@ const ExchangeBox = () => {
             </label>
             <input
               type="text"
-              pattern="[0-9]*"
               inputMode="decimal"
               autoComplete="off"
+              autoCorrect="off"
+              spellCheck="false"
               className="bg-[#EDF7FE] text-[#333333] text-[20px] lg:text-[24px] font-medium leading-[30px] focus:outline-none w-full"
               value={inr}
               onChange={handleInrChange}
@@ -169,9 +164,10 @@ const ExchangeBox = () => {
             </label>
             <input
               type="text"
-              pattern="[0-9]*"
               inputMode="decimal"
               autoComplete="off"
+              autoCorrect="off"
+              spellCheck="false"
               className="bg-[#EDF7FE] text-[#333333] text-[20px] lg:text-[24px] font-medium leading-[30px] focus:outline-none w-full"
               value={cad}
               onChange={handleCadChange}
