@@ -78,7 +78,7 @@ const ExchangeBox = () => {
               type="text"
               pattern="[0-9]*"
               inputMode="decimal"
-              autocomplete="off"
+              autoComplete="off"
               className="bg-[#EDF7FE] text-[#333333] text-[20px] lg:text-[24px] font-medium leading-[30px] focus:outline-none w-full"
               value={inr}
               onChange={handleInrChange}
@@ -171,7 +171,7 @@ const ExchangeBox = () => {
               type="text"
               pattern="[0-9]*"
               inputMode="decimal"
-              autocomplete="off"
+              autoComplete="off"
               className="bg-[#EDF7FE] text-[#333333] text-[20px] lg:text-[24px] font-medium leading-[30px] focus:outline-none w-full"
               value={cad}
               onChange={handleCadChange}
