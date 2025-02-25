@@ -49,7 +49,18 @@ const ExchangeBox = () => {
   }, []);
 
   const lockInRate = () => {
-    const whatsappURL = `https://wa.me/15483845252?text=Hi%20RemiFlow,%20I%20would%20like%20to%20send%20${inr}%20CAD%20to%20India%20at%20the%20rate%20of%20${exchangeRate}%20INR%20via%20${paymentMethod}.%20Kindly%20proceed%20with%20the%20transaction.`;
+    const formattedINR = parseFloat(inr).toLocaleString("en-IN", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+    const formattedCAD = parseFloat(cad).toLocaleString("en-IN", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+
+    const whatsappURL = `https://wa.me/15483845252?text=Hi%20RemiFlow,%0A%0AI%20would%20like%20to%20send%20${formattedCAD}%20CAD%20to%20India%20via%20${paymentMethod}.%0A%0A➡%20Exchange%20Rate:%201%20CAD%20=%20${exchangeRate.toFixed(
+      2
+    )}%20INR%0A➡%20Total%20INR%20Received%20=%20${formattedINR}%20INR%0A%0APlease%20confirm%20and%20proceed%20with%20the%20transaction.`;
     window.location.href = whatsappURL;
   };
 
