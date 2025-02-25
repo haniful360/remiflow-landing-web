@@ -143,7 +143,7 @@ const Footer = () => {
               <Image
                 src={mobileLogo}
                 alt="Mobile Logo"
-                width={198}
+                width={160}
                 height={46}
                 quality={100}
                 priority
