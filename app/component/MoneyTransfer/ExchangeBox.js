@@ -11,8 +11,8 @@ import RightArrowIcon from "../svg/RightArrowIcon";
 const paymentOptions = ["E-Transfer", "Cash pickup (within GTA)"];
 
 const ExchangeBox = () => {
-  const [inr, setInr] = useState(1000);
-  const [cad, setCad] = useState(60040.0);
+  const [inr, setInr] = useState("1000.00");
+  const [cad, setCad] = useState("60040.00");
   const [paymentMethod, setPaymentMethod] = useState(paymentOptions[0]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -25,7 +25,6 @@ const ExchangeBox = () => {
     setCad(value ? (parseFloat(value) * exchangeRate).toFixed(2) : "");
   };
 
-  // Convert CAD to INR
   const handleCadChange = (e) => {
     const value = e.target.value.replace(/[^0-9.]/g, "");
     setCad(value);
@@ -39,7 +38,6 @@ const ExchangeBox = () => {
     setIsDropdownOpen(false);
   };
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -51,7 +49,7 @@ const ExchangeBox = () => {
   }, []);
 
   const lockInRate = () => {
-    const whatsappURL = `https://wa.me/15483845252?text=Hi%20RemiFlow,%20I%20would%20like%20to%20send%20${cad}%20CAD%20to%20India%20at%20the%20rate%20of%20${exchangeRate}%20INR%20via%20${paymentMethod}.%20Kindly%20proceed%20with%20the%20transaction.`;
+    const whatsappURL = `https://wa.me/15483845252?text=Hi%20RemiFlow,%20I%20would%20like%20to%20send%20${inr}%20CAD%20to%20India%20at%20the%20rate%20of%20${exchangeRate}%20INR%20via%20${paymentMethod}.%20Kindly%20proceed%20with%20the%20transaction.`;
     window.location.href = whatsappURL;
   };
 
@@ -131,11 +129,11 @@ const ExchangeBox = () => {
             </div>
             <p className="flex justify-between font-semibold border-b-[1.25px] pt-[6px] pb-3 border-[#ECEEF3]">
               <span>Amount to convert</span>
-              <span>{inr} INR</span>
+              <span>{parseFloat(inr).toFixed(2)} INR</span>
             </p>
             <p className="flex justify-between font-semibold pt-3">
               <span>Exchange rate</span>
-              <span>{cad} INR</span>
+              <span>{parseFloat(cad).toFixed(2)} INR</span>
             </p>
           </div>
         </div>
@@ -205,7 +203,7 @@ const ExchangeBox = () => {
 
       {/* Exchange Rate */}
       <p className="hidden md:block text-right text-sm sm:text-[16px] text-[#989898] mt-2 font-poppins font-medium border-b-[1.25px] pt-1 pb-2 border-[#ECEEF3]">
-        1 CAD = {exchangeRate} INR
+        1 CAD = {exchangeRate.toFixed(2)} INR
       </p>
 
       {/* for mobile */}
@@ -240,8 +238,8 @@ const ExchangeBox = () => {
                 <Image
                   src={downarrow}
                   alt="Down Arrow"
-                  width={14} // Increased size
-                  height={14} // Increased size
+                  width={14}
+                  height={14}
                   className="w-3 h-3 lg:w-[14px] md:h-[14px] transition-transform duration-200 ease-in-out"
                 />
               </span>
