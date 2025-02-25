@@ -293,7 +293,7 @@ const ExchangeBox = () => {
       <div className="pb-5">
         <button
           onClick={lockInRate}
-          className="send_money_btn w-full  h-12 sm:h-[74px] text-[16px] font-medium sm:text-[24px] font-poppins text-white rounded-lg hover:bg-blue-700 transition"
+          className="send_money_btn w-full  h-12 sm:h-[74px] font-poppins text-[16px] font-semibold sm:text-[24px]  text-white rounded-lg hover:bg-blue-700 transition"
         >
           Lock in Rate & Continue
         </button>

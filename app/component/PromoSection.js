@@ -30,7 +30,7 @@ const PromoSection = () => {
           exchange rates with zero fees.
         </p>
         <button
-          className="bg-[#039D21] text-[16px] w-full sm:max-w-sm md:max-w-md lg:w-[415px] lg:h-[78px] rounded-[15px] font-poppins text-white font-semibold py-4 shadow-md hover:bg-green-700 transition"
+          className="bg-[#039D21] font-poppins text-[16px] font-semibold w-full sm:max-w-sm md:max-w-md lg:w-[415px] lg:h-[78px] rounded-[15px]  text-white  py-4 shadow-md hover:bg-green-700 transition"
           data-aos="fade-up"
         >
           Contact Us Now

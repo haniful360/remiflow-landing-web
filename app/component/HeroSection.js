@@ -40,7 +40,7 @@ const HeroSection = () => {
             data-aos="fade-left"
           >
             <Link href="#moneytransfer">
-              <button className="max-w-[364px] font-poppins min-w-[180px] mx-auto block text-[16px] sm:text-lg lg:text-[26px] w-full sm:w-[200px] lg:w-[250px] h-[54px] sm:h-[60px] lg:h-[68px] rounded-full lg:rounded-[34px] bg-[#039D21] md:bg-[#268BEB] font-semibold lg:font-medium text-white px-6 py-3 hover:bg-[#1a6bbf] transition-colors">
+              <button className="max-w-[364px] font-poppins text-[16px] font-semibold min-w-[180px] mx-auto block  sm:text-lg lg:text-[26px] w-full sm:w-[200px] lg:w-[250px] h-[54px] sm:h-[60px] lg:h-[68px] rounded-full lg:rounded-[34px] bg-[#039D21] md:bg-[#268BEB] lg:font-medium text-white px-6 py-3 hover:bg-[#1a6bbf] transition-colors">
                 Send Money
               </button>
             </Link>
