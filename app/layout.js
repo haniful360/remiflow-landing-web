@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
       <head>
         {/* Add the favicon */}
         {/* <link rel="icon" href="favicon_6.png" type="image/png" /> */}
-        <link rel="icon" href="/favicon_6.png?v=1" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <title>Remiflow</title>
       </head>
       <body
