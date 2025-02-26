@@ -39,9 +39,6 @@ const Footer = () => {
             >
               <FacebookIcon />
             </Link>
-            <Link href="#" className="text-gray-600 hover:text-gray-900">
-              <Image src={x} alt="" width={24} height={24} />
-            </Link>
             <Link
               href="https://www.instagram.com/remiflowofficial?igsh=b3Q5azV1bDcxYjlh"
               target="_blank"
@@ -49,12 +46,16 @@ const Footer = () => {
             >
               <Image src={instagram} alt="" width={24} height={24} />
             </Link>
-            {/* <Link href="#" className="text-gray-600 hover:text-gray-900">
-              <Image src={youtube} alt="" width={24} height={24} />
-            </Link> */}
             <Link href="#" className="text-gray-600 hover:text-gray-900">
               <Image src={linkedIn} alt="" width={24} height={24} />
             </Link>
+            <Link href="#" className="text-gray-600 hover:text-gray-900">
+              <Image src={x} alt="" width={24} height={24} />
+            </Link>
+            {/* <Link href="#" className="text-gray-600 hover:text-gray-900">
+              <Image src={youtube} alt="" width={24} height={24} />
+            </Link> */}
+            
           </div>
         </div>
         <div className="font-poppins" data-aos="fade-up">
@@ -171,17 +172,19 @@ const Footer = () => {
               <Link target="_blank" href="https://www.facebook.com/profile.php?id=61572951115848&mibextid=wwXIfr&mibextid=wwXIfr" className="text-gray-600 hover:text-gray-900">
                 <FacebookIcon/>
               </Link>
-              <Link href="#" target="_blank" className="text-gray-600 hover:text-gray-900">
-                <Image src={x} alt="" width={24} height={24} />
-              </Link>
               <Link href="https://www.instagram.com/remiflowofficial?igsh=b3Q5azV1bDcxYjlh" target="_blank" className="text-gray-600 hover:text-gray-900">
                 <Image src={instagram} alt="" width={24} height={24} />
               </Link>
+             
+              
               {/* <Link href="#" className="text-gray-600 hover:text-gray-900">
                 <Image src={youtube} alt="" width={24} height={24} />
               </Link> */}
               <Link href="#" target="_blank" className="text-gray-600 hover:text-gray-900">
                 <Image src={linkedIn} alt="" width={24} height={24} />
+              </Link>
+              <Link href="#" target="_blank" className="text-gray-600 hover:text-gray-900">
+                <Image src={x} alt="" width={24} height={24} />
               </Link>
             </div>
           </div>
