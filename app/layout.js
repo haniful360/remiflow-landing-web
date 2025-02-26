@@ -31,7 +31,7 @@ const outfit = Outfit({
 
 export default function RootLayout({ children }) {
   useEffect(() => { 
-    Aos.init();  // Initialize AOS on client-side only
+    Aos.init(); 
   }, []);
 
   return (
