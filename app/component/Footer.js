@@ -32,14 +32,21 @@ const Footer = () => {
             </Link>
           </h2>
           <div className="flex items-center space-x-4 mt-4">
-          <Link href="https://www.facebook.com/profile.php?id=61572951115848&mibextid=wwXIfr&mibextid=wwXIfr
-" target="_blank" className="text-gray-600 hover:text-gray-900">
-              <FacebookIcon/>
+            <Link
+              href="https://www.facebook.com/profile.php?id=61572951115848&mibextid=wwXIfr&mibextid=wwXIfr"
+              target="_blank"
+              className="text-gray-600 hover:text-gray-900"
+            >
+              <FacebookIcon />
             </Link>
             <Link href="#" className="text-gray-600 hover:text-gray-900">
               <Image src={x} alt="" width={24} height={24} />
             </Link>
-            <Link href="https://www.instagram.com/remiflowofficial?igsh=b3Q5azV1bDcxYjlh"  target="_blank" className="text-gray-600 hover:text-gray-900">
+            <Link
+              href="https://www.instagram.com/remiflowofficial?igsh=b3Q5azV1bDcxYjlh"
+              target="_blank"
+              className="text-gray-600 hover:text-gray-900"
+            >
               <Image src={instagram} alt="" width={24} height={24} />
             </Link>
             {/* <Link href="#" className="text-gray-600 hover:text-gray-900">
@@ -161,10 +168,13 @@ const Footer = () => {
           </div>
           <div className="md:hidden">
             <div className="flex justify-center space-x-4 mt-4 ">
-              <Link href="#" className="text-gray-600 hover:text-gray-900">
+              <Link href="https://www.facebook.com/profile.php?id=61572951115848&mibextid=wwXIfr&mibextid=wwXIfr" className="text-gray-600 hover:text-gray-900">
                 <Image src={x} alt="" width={24} height={24} />
               </Link>
               <Link href="#" className="text-gray-600 hover:text-gray-900">
+                <Image src={x} alt="" width={24} height={24} />
+              </Link>
+              <Link href="https://www.instagram.com/remiflowofficial?igsh=b3Q5azV1bDcxYjlh" className="text-gray-600 hover:text-gray-900">
                 <Image src={instagram} alt="" width={24} height={24} />
               </Link>
               {/* <Link href="#" className="text-gray-600 hover:text-gray-900">
