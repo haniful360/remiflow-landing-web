@@ -37,10 +37,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Add the favicon */}
-        {/* <link rel="icon" href="/favicon.ico" type="ico" /> */}
-        {/* <link rel="icon" href="/favicon.svg" type="image/svg+xml" /> */}
-        <link rel="icon" href="https://remiflow.vercel.app/favicon.svg" type="svg" />
+
+      {/* <link rel="icon" href="/favicon.svg" type="image/svg+xml"/> */}
+      <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml"/>
+
+
         <title>Remiflow</title>
       </head>
       <body
