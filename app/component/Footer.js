@@ -7,6 +7,7 @@ import x from "@/public/images/X Logo.svg";
 import youtube from "@/public/images/Logo YouTube.svg";
 import linkedIn from "@/public/images/LinkedIn.svg";
 import instagram from "@/public/images/Logo Instagram.svg";
+import FacebookIcon from "./svg/FacebookIcon";
 
 const Footer = () => {
   return (
@@ -30,16 +31,20 @@ const Footer = () => {
               />
             </Link>
           </h2>
-          <div className="flex space-x-4 mt-4">
+          <div className="flex items-center space-x-4 mt-4">
+          <Link href="https://www.facebook.com/profile.php?id=61572951115848&mibextid=wwXIfr&mibextid=wwXIfr
+" target="_blank" className="text-gray-600 hover:text-gray-900">
+              <FacebookIcon/>
+            </Link>
             <Link href="#" className="text-gray-600 hover:text-gray-900">
               <Image src={x} alt="" width={24} height={24} />
             </Link>
-            <Link href="#" className="text-gray-600 hover:text-gray-900">
+            <Link href="https://www.instagram.com/remiflowofficial?igsh=b3Q5azV1bDcxYjlh"  target="_blank" className="text-gray-600 hover:text-gray-900">
               <Image src={instagram} alt="" width={24} height={24} />
             </Link>
-            <Link href="#" className="text-gray-600 hover:text-gray-900">
+            {/* <Link href="#" className="text-gray-600 hover:text-gray-900">
               <Image src={youtube} alt="" width={24} height={24} />
-            </Link>
+            </Link> */}
             <Link href="#" className="text-gray-600 hover:text-gray-900">
               <Image src={linkedIn} alt="" width={24} height={24} />
             </Link>
@@ -162,9 +167,9 @@ const Footer = () => {
               <Link href="#" className="text-gray-600 hover:text-gray-900">
                 <Image src={instagram} alt="" width={24} height={24} />
               </Link>
-              <Link href="#" className="text-gray-600 hover:text-gray-900">
+              {/* <Link href="#" className="text-gray-600 hover:text-gray-900">
                 <Image src={youtube} alt="" width={24} height={24} />
-              </Link>
+              </Link> */}
               <Link href="#" className="text-gray-600 hover:text-gray-900">
                 <Image src={linkedIn} alt="" width={24} height={24} />
               </Link>
